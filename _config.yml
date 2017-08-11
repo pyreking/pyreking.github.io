@@ -1,0 +1,45 @@
+# Permalinks
+permalink:           pretty
+
+# Setup
+title:               Austin Guiney
+tagline:             "A history, sports, and pop culture blog!"
+url:                 http://austinguiney.com
+paginate:            10
+baseurl:             ""
+
+# Assets
+#
+# We specify the directory for Jekyll so we can use @imports.
+sass:
+  sass_dir:          _sass
+  style:            :compressed
+
+# About/contact
+author:
+  name:              Austin Guiney
+  url:               https://twitter.com/SenorKoffey
+  email:             austin.guiney@gmail.com
+
+# Custom vars
+version:             2.0.0
+github:
+  repo:              https://github.com/pyreking.github.io
+
+# Gems
+gems:
+  - jekyll-paginate
+  - jekyll-gist
+
+# Navigation bar
+pages_list:       
+  About: '/about'
+  Archive: '/archive'
+  Feed: '/atom.xml'
+  Search: '/search'
+
+# Post preview
+excerpt_separator: <!--more-->
+
+# Comments
+comments: true
