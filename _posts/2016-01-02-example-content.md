@@ -2,6 +2,8 @@
 layout: post
 title: Example content
 comments: true
+tags: pizza yogurt custard
+summary: "It's mother-licking good!"
 ---
 
 
