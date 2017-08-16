@@ -27,10 +27,30 @@
 .post-date {
   display: block;
   margin-top: -.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   color: #9a9a9a;
 }
 
+.post-tags {
+  display: block;
+  margin-top: -.5rem;
+  margin-bottom: 1rem;
+}
+
+.taggy {
+   background: rgba(106,159,181,0.15);
+   padding: 0 .4rem;
+   border-radius: 4px;
+   font-size: 90%;
+   color: #6a9fb5;
+}
+
+
+.taggy:hover{
+   text-decoration:none;
+   background:#6a9fb5;
+   color:#fff
+}
 
 // Related posts
 .related {

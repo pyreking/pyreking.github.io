@@ -2,11 +2,8 @@
 layout: post
 title: Example content
 comments: true
-tags: pizza yogurt custard
-summary: "It's mother-licking good!"
+tags: custard
 ---
-
-
 <div class="message">
   Howdy! This is an example blog post that shows several types of HTML content supported in this theme.
 </div>
