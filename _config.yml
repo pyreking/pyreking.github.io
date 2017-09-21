@@ -32,8 +32,7 @@ gems:
   - jekyll-gist
 
 # Navigation bar
-pages_list:       
-  About: '/about'
+pages_list:
   Archive: '/archive'
   Feed: '/atom.xml'
   Search: '/search'

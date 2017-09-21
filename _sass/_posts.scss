@@ -27,8 +27,14 @@
 .post-date {
   display: block;
   margin-top: -.5rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
   color: #9a9a9a;
+}
+
+.post-author {
+  display: block;
+  margin-top: -.5rem;
+  margin-bottom: 0.6rem;
 }
 
 .post-tags {
@@ -37,7 +43,7 @@
   margin-bottom: 1rem;
 }
 
-.taggy {
+.tag-style {
    background: rgba(106,159,181,0.15);
    padding: 0 .4rem;
    border-radius: 4px;
@@ -45,19 +51,22 @@
    color: #6a9fb5;
 }
 
-
-.taggy:hover{
+.ta:hover{
    text-decoration:none;
    background:#6a9fb5;
    color:#fff
 }
 
+.author-info {
+  display: block;
+  margin-bottom: 1rem;
+  border-top: 2px solid #cfcfcf;
+}
+
 // Related posts
 .related {
-  padding-top: 0rem;
-  padding-bottom: 0.5rem;
-  margin-bottom: 2rem;
-  border-top: 1px solid #eee;
+  border-top: 2px solid #cfcfcf;
+  border-bottom: 2px solid #cfcfcf;
 }
 
 .related-posts {

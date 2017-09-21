@@ -1,0 +1,39 @@
+{% assign author = site.data.authors[page.author] %}
+
+<!-- Post details about the author. -->
+{% if author %}
+<aside class="author-info">
+<h2>About the Author</h2>
+<h3>{{ author.name }}</h3>
+
+{% if author.bio %}
+<p>{{author.bio}}</p>
+{% endif %}
+
+<h3>Social Media</h3>
+{% if author.website %}
+<a href="{{author.website}}">
+<i class="fa fa-globe"></i></a>
+{% endif %}
+
+{% if author.email %}
+<a href="mailto:{{author.email}}">
+<i class="fa fa-envelope-o"></i></a>
+{% endif %}
+
+{% if author.twitter %}
+<a href="https://www.twitter.com/{{author.twitter}}">
+<i class="fa fa-twitter-square"></i></a>
+{% endif %}
+
+{% if author.github %}
+<a href="https://www.github.com/{{author.github}}">
+<i class="fa fa-github-square"></i></a>
+{% endif %}
+
+{% if author.instagram %}
+<a href="https://www.instagram.com/{{author.instagram}}">
+<i class="fa fa-instagram"></i></a>
+</aside>
+{% endif %}
+{% endif %}

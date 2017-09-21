@@ -1,18 +1,27 @@
 ---
 layout: default
 ---
+<!-- Title and date -->
 <article class="post">
   <h1 class="post-title">{{ page.title }}</h1>
   <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ page.date | pretty }}</time>
+
+<!-- Tags -->
 <span class="post-tags">
-{% if page.tags.size > 0 %}
-<a class="taggy" href="{{ site.url }}/tags/"
-><i class="fa fa-tags" aria-hidden="true"></i></a>
-{% include get_tags.html tags=page.tags %}
-{% endif %}
+  {% if page.tags.size > 0 %}
+    <a class="tag-style" href="{{ site.url }}/tags/">
+    <i class="fa fa-tags" aria-hidden="true"></i></a>
+    {% include get_tags.html tags=page.tags %}
+    {% endif %}
 </span>
+
+<!-- Body of post -->
 {{ content }}
 
+<!-- About the author-->
+{% include about_author.html %}
+
+<!-- Related posts -->
 {% if site.related_posts != empty %}
 <aside class="related">
   <h2>Related posts</h2>
