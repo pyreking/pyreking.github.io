@@ -20,7 +20,9 @@ permalink: /tags/
   <h3 id="{{ tag | escape }}">{{ tag }}</h3>
   <ul>
   {% for post in site.tags[tag] %}
-    <li><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a> ({{ post.date | date: '%m/%d/%y' }})</li>
+    <li><a href="{{site.baseurl}}{{ post.url }}">
+    <span class="archive-title">{{ post.title }}</span></a> 
+    <span class="archive-date">{{ post.date | date: "%m/%d/%y" }}</span></li>
   {% endfor %}
   </ul>
 {% endfor %}

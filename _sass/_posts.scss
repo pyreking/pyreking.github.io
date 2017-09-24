@@ -59,14 +59,42 @@
 
 .author-info {
   display: block;
+  padding-bottom: 1.10rem;
   margin-bottom: 1rem;
-  border-top: 2px solid #cfcfcf;
+  border-bottom: 2px solid #cfcfcf;
+}
+
+.author-pic {
+  display: block;
+  float: left;
+  border: 1px solid black;
+  max-width: 70px;
+  max-height: 70px;
+  width: auto;
+  height: auto;
+  margin: 0px 10px -10px 1px;
+}
+
+.clear {
+  clear: both;
+}
+
+.archive-title {
+  display: inline;
+  font-size: larger;
+}
+
+.archive-date {
+  display: inline;
+  font-size: 95%;
+  color: #8c8c8c;
 }
 
 // Related posts
 .related {
   border-top: 2px solid #cfcfcf;
   border-bottom: 2px solid #cfcfcf;
+  margin-top: -0.4rem;
 }
 
 .related-posts {

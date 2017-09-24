@@ -6,11 +6,23 @@
 <h2>About the Author</h2>
 <h3>{{ author.name }}</h3>
 
-{% if author.bio %}
-<p>{{author.bio}}</p>
+{% if author.picture %}
+
+<img class="author-pic" src="{{author.picture}}"> 
 {% endif %}
 
+{% if author.bio %}
+
+<p>{{author.bio}}</p>
+
+{% endif %}
+
+
+<div class="clear">
+
+
 <h3>Social Media</h3>
+
 {% if author.website %}
 <a href="{{author.website}}">
 <i class="fa fa-globe"></i></a>
@@ -26,14 +38,27 @@
 <i class="fa fa-twitter-square"></i></a>
 {% endif %}
 
-{% if author.github %}
-<a href="https://www.github.com/{{author.github}}">
-<i class="fa fa-github-square"></i></a>
+{% if author.facebook %}
+<a href="https://www.facebook.com/{{author.facebook}}">
+<i class="fa fa-facebook-square"></i></a>
+{% endif %}
+
+{% if author.youtube %}
+<a href="https://www.youtube.com/user/{{author.youtube}}">
+<i class="fa fa-youtube"></i></a>
 {% endif %}
 
 {% if author.instagram %}
 <a href="https://www.instagram.com/{{author.instagram}}">
 <i class="fa fa-instagram"></i></a>
-</aside>
 {% endif %}
+
+{% if author.github %}
+<a href="https://www.github.com/{{author.github}}">
+<i class="fa fa-github-square"></i></a>
+{% endif %}
+
+
+</div>
+
 {% endif %}

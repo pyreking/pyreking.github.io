@@ -5,7 +5,10 @@ module Jekyll
   module DateFilter
     def pretty(date)
       "#{date.strftime('%B')} #{date.strftime('%e').to_i.ordinalize}, #{date.strftime('%Y')}"
-    end  
+    end 
+    def shortpretty(date)
+     "#{date.strftime('%b')} #{date.strftime('%e').to_i.ordinalize}, #{date.strftime('%Y')}"
+     end
   end
 end
 

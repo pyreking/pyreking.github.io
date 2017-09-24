@@ -27,9 +27,10 @@ github:
   repo:              https://github.com/pyreking.github.io
 
 # Gems
-gems:
+plugins:
   - jekyll-paginate
   - jekyll-gist
+  - jekyll-archives
 
 # Navigation bar
 pages_list:
@@ -42,3 +43,7 @@ excerpt_separator: <!--more-->
 
 # Comments
 comments: true
+
+jekyll-archives:
+  enabled: all
+  year-layout: year-archive
