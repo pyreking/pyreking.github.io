@@ -1,64 +1,67 @@
+<!-- Store the author's information in a variable -->
 {% assign author = site.data.authors[page.author] %}
 
-<!-- Post details about the author. -->
+<!-- Publish the author's name -->
 {% if author %}
 <aside class="author-info">
 <h2>About the Author</h2>
 <h3>{{ author.name }}</h3>
 
+<!-- Small picture of the author -->
 {% if author.picture %}
-
 <img class="author-pic" src="{{author.picture}}"> 
 {% endif %}
 
+<!-- Brief bio about the author -->
 {% if author.bio %}
-
 <p>{{author.bio}}</p>
-
 {% endif %}
 
-
+<!-- Social media links -->
 <div class="clear">
-
-
 <h3>Social Media</h3>
 
+<!-- Personal website -->
 {% if author.website %}
 <a href="{{author.website}}">
 <i class="fa fa-globe"></i></a>
 {% endif %}
 
+<!-- Email address -->
 {% if author.email %}
 <a href="mailto:{{author.email}}">
 <i class="fa fa-envelope-o"></i></a>
 {% endif %}
 
+<!-- Twitter account -->
 {% if author.twitter %}
 <a href="https://www.twitter.com/{{author.twitter}}">
 <i class="fa fa-twitter-square"></i></a>
 {% endif %}
 
-{% if author.facebook %}
+<!-- Facebook account -->
+{% if author.facebo1ok %}
 <a href="https://www.facebook.com/{{author.facebook}}">
 <i class="fa fa-facebook-square"></i></a>
 {% endif %}
 
+<!-- YouTube account -->
 {% if author.youtube %}
 <a href="https://www.youtube.com/user/{{author.youtube}}">
 <i class="fa fa-youtube"></i></a>
 {% endif %}
 
+<!-- Instagram account -->
 {% if author.instagram %}
 <a href="https://www.instagram.com/{{author.instagram}}">
 <i class="fa fa-instagram"></i></a>
 {% endif %}
 
+<!-- GitHub account -->
 {% if author.github %}
 <a href="https://www.github.com/{{author.github}}">
 <i class="fa fa-github-square"></i></a>
 {% endif %}
-
-
 </div>
 
 {% endif %}
