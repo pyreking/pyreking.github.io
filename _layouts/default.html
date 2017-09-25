@@ -1,23 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!-- Load the external HTML header -->
   {% include head.html %}
+  
+  <!-- Load the external stylsheet for searching -->
+  <link rel="stylesheet" href="/../../../css/super-search.css">
   <body>
     <div class="container content">
       <header class="masthead">
         <h3 class="masthead-title">
-          <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
-	<!-- Generate page links -->
-	{% for page in site.pages_list %}
+        
+	<!-- Home link-->
+		<a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
+          
+	<!-- Archive link -->
+		&nbsp;&nbsp;&nbsp;
+		<a href="/archive" title="Archive">
+		<small><i class="fa fa-archive" aria-hidden="true"></i></small></a>
+          
+	<!-- Atom feed -->
+		&nbsp;&nbsp;&nbsp;
+		<a href="/atom.xml" title="Feed">
+		<small><i class="fa fa-rss" aria-hidden="true"></i></small></a>
+	
+	<!-- Click on the search icon to search -->
 	&nbsp;&nbsp;&nbsp;
-	<small><a href="{{ page[1]  }}">{{ page[0] }}</a></small>
-	{% endfor %}
+	<a href="javascript:void(0)" title="Click or press '/' to search" onclick="toggleSearch()" class="search-btn">
+	<small><i class="fa fa-search" aria-hidden="true"></i></small>
+	</a>
+	
+	<!-- Press / to search -->
+	 <div class="super-search" id="js-super-search">
+  <a href="javascript:void(0)" onclick="superSearch.toggle()" class="super-search__close-btn">
+  
+  <!-- X icon for search -->
+  <svg style="width:48px;height:48px" viewBox="0 0 24 24">
+<path d="M13.46,12L19,17.54V19H17.54L12,13.46L6.46,19H5V17.54L10.54,12L5,6.46V5H6.46L12,10.54L17.54,5H19V6.46L13.46,12Z" />
+</svg></a>
+
+<!-- Text field for search -->
+  <input type="text" placeholder="Type here to search" class="super-search__input" id="js-super-search__input">
+  <ul class="super-search__results" id="js-super-search__results"></ul>
+ </div>
+
+<!-- Load external search script -->
+ <script src="/../../../js/super-search.js"></script>
+ <script>superSearch({
+ 	// Load the site's atom feed
+ 	searchFile: '/atom.xml'
+ });</script>
         </h3>
       </header>
-
+      
+	<!-- Main content -->
       <main> {{ content }} </main>
+      
 	<!-- Comments section -->
      {% include comments.html %}
 	<br>
+	
 	<!-- Copyright Disclaimer -->
       <footer class="footer">
       <small>
@@ -27,6 +69,7 @@
 	</center>
       </footer>
     </div>
+    
 	<!-- Google Analytics -->
     {% include google_analytics.html %}
   </body>

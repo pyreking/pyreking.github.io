@@ -37,12 +37,14 @@
   margin-bottom: 0.6rem;
 }
 
+// Post tags
 .post-tags {
   display: block;
   margin-top: -.5rem;
   margin-bottom: 1rem;
 }
 
+// Blue cloud for post tags
 .tag-style {
    background: rgba(106,159,181,0.15);
    padding: 0 .4rem;
@@ -51,12 +53,14 @@
    color: #6a9fb5;
 }
 
+// Change color when hovering
 .tag-style:hover{
    text-decoration:none;
    background:#6a9fb5;
    color:#fff
 }
 
+// Styling for about author section
 .author-info {
   display: block;
   padding-bottom: 1.10rem;
@@ -64,6 +68,7 @@
   border-bottom: 2px solid #cfcfcf;
 }
 
+// Styling for author image
 .author-pic {
   display: block;
   float: left;
@@ -79,6 +84,7 @@
   clear: both;
 }
 
+// Styling for archive pages
 .archive-title {
   display: inline;
   font-size: larger;

@@ -30,13 +30,7 @@ github:
 plugins:
   - jekyll-paginate
   - jekyll-gist
-
-# Navigation bar
-pages_list:
-  Archive: '/archive'
-  Feed: '/atom.xml'
-  Search: '/search'
-
+  
 # Post preview
 excerpt_separator: <!--more-->
 
