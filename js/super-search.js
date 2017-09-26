@@ -92,14 +92,60 @@ MIT Licensed
 			searchResultsEl.classList.add('is-hidden');
 		}
 		currentResultHash = matchingPosts.reduce(function(hash, post) { return post.title + hash; }, '');
+		
 		if (matchingPosts.length && currentResultHash !== lastSearchResultHash) {
 			searchResultsEl.classList.remove('is-hidden');
 			searchResultsEl.innerHTML = matchingPosts.map(function (post) {
+				
+				// Get the post date
 				d = new Date(post.updated);
-				return '<li><a href="' + post.id + '">' + post.title + '<span class="super-search__result-date">' + d.toUTCString().replace(/.*(\d{2})\s+(\w{3})\s+(\d{4}).*/,'$2 $1, $3') + '</span></a></li>';
+				
+				// Get the name of the month
+				var utcMonth = getMonthName(d.getUTCMonth());
+				
+				// Get the day of the month with an ordinal
+				var utcDay = getOrdinal(d.getUTCDate());
+				
+				// Get the full year
+				var utcYear = d.getFullYear().toString();
+				
+				// Construct the full date
+				var fullDate = utcMonth + " " + utcDay + ", " + utcYear;
+				
+				// Return the search result
+				return '<li><a href="' + post.id + '">' + post.title + '<span class="super-search__result-date">' + fullDate + '</span></a></li>';
 			}).join('');
 		}
 		lastSearchResultHash = currentResultHash;
+	}
+	
+	
+	// Returns the day of the month with an ordinal
+	function getOrdinal(n) {
+		if ((parseFloat(n) == parseInt(n)) && !isNaN(n)) {
+        	var s=["th","st","nd","rd"],
+        	v=n%100;
+        return n+(s[(v-20)%10]||s[v]||s[0]);
+    	}
+    	return n;     
+	}
+	
+	// Returns the full name of the month
+	function getMonthName(n) {
+		var month = new Array(12);
+		month[0] = "January";
+		month[1] = "Febuary";
+		month[2] = "March";
+		month[3] = "April";
+		month[4] = "May";
+		month[5] = "June";
+		month[6] = "July";
+		month[7] = "August";
+		month[8] = "Septempter";
+		month[9] = "October";
+		month[10] = "November";
+		month[11] = "December";
+		return month[n];
 	}
 
 	function init(options) {
