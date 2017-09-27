@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<h1>Archive of posts from {{ page.date | date: "%B %Y" }}</h1>
+
+<ul class="posts">
+{% for post in page.posts %}
+<h3>
+    <span class="archive-month-date">{{ post.date | date: "%m/%d/%y" }}</span>
+    </h3>
+   <li><a class="archive-month-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+  </li>
+{% endfor %}
+</ul>

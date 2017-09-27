@@ -30,9 +30,24 @@ github:
 plugins:
   - jekyll-paginate
   - jekyll-gist
+  - jekyll-archives
   
 # Post preview
 excerpt_separator: <!--more-->
 
 # Comments
 comments: true
+
+jekyll-archives:
+  enabled:
+    - year
+    - month
+    - day
+  layouts:
+    year: year
+    month: month
+    day: day
+  permalinks:
+    year: '/:year/'
+    month: '/:year/:month/'
+    day: '/:year/:month/:day/'
