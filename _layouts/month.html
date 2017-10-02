@@ -11,10 +11,28 @@ layout: default
 
 <!-- Loop through each sorted post -->
 {% for post in sorted %}
+
+<!-- Get the index for the previous element in the loop -->
+{% assign prev_post = forloop.index0 | minus: 1 %}
+
+<!-- Get the date for the previous post -->
+{% assign prev_date = sorted[prev_post].date | month_ordinal %}
+
+<!-- Get the date for the current post -->
+{% assign curr_date = post.date | month_ordinal %}
+
+<!-- Create a new header if the current and previous dates are different -->
+{% if prev_date != curr_date %}
+
 <h3>
-    <span class="archive-month-date">{{ post.date | monthordinal }}</span>
-    </h3>
-   <li><a class="archive-month-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-  </li>
+<span class="archive-month-date">{{ post.date | month_ordinal }}</span>
+</h3>
+{% endif %}
+
+<!-- Print the current post title -->
+<li>
+<a class="archive-month-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+</li>
+
 {% endfor %}
 </ul>

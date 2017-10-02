@@ -4,11 +4,26 @@ layout: default
 
 <h1>Archive of posts from {{ page.date | date: "%Y" }}</h1>
 
+
+{% assign sorted = page.posts | sort:"date" %}
+
+
 <ul class="posts">
-{% for post in page.posts %}
-  <h3>
-    <span class="archive-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-    </h3>
+{% for post in sorted %}
+
+{% assign prev_post = forloop.index0 | minus: 1 %}
+
+{% assign prev_date = sorted[prev_post].date | date: "%B" %}
+
+{% assign curr_date = post.date | date: "%B" %}
+
+{% if prev_date != curr_date or forloop.first == true %}
+
+
+  <h2>
+    <span class="archive-date">{{ post.date | date: "%B" }}</span>
+    </h2>
+    {% endif %}
     <li>
     <a class="archive-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
   </li>

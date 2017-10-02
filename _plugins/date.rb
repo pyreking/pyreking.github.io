@@ -6,10 +6,10 @@ module Jekyll
     def ordinal(date)
       "#{date.strftime('%B')} #{date.strftime('%e').to_i.ordinalize}, #{date.strftime('%Y')}"
     end 
-    def shortordinal(date)
+    def short_ordinal(date)
      "#{date.strftime('%b')} #{date.strftime('%e').to_i.ordinalize}, #{date.strftime('%Y')}"
      end
-     def monthordinal(date)
+     def month_ordinal(date)
      "#{date.strftime('%B')} #{date.strftime('%e').to_i.ordinalize}"
      end
   end
