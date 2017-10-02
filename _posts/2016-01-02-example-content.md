@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Example content
-comments: true
 tags: custard
 ---
 <div class="message">

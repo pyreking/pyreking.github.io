@@ -35,9 +35,6 @@ plugins:
 # Post preview
 excerpt_separator: <!--more-->
 
-# Comments
-comments: true
-
 jekyll-archives:
   enabled:
     - year
