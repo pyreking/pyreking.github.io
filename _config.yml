@@ -40,11 +40,14 @@ jekyll-archives:
     - year
     - month
     - day
+    - tags
   layouts:
     year: year
     month: month
     day: day
+    tag: tag
   permalinks:
     year: '/:year/'
     month: '/:year/:month/'
     day: '/:year/:month/:day/'
+    tag: '/tag/:name/'
