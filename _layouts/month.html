@@ -33,7 +33,7 @@ layout: default
 <li class="no-bullets">
 <h2>
 <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
-<span><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | month_ordinal }}</time></span>
+<span><time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | month_ordinal }}</time></span>
 </li>
 
 {% endfor %}
