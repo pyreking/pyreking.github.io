@@ -4,9 +4,7 @@ layout: default
 
 <h1>Archive of posts from {{ page.date | date: "%Y" }}</h1>
 
-
 {% assign sorted = page.posts | sort:"date" %}
-
 
 <ul class="posts">
 {% for post in sorted %}
@@ -18,14 +16,15 @@ layout: default
 {% assign curr_date = post.date | date: "%B" %}
 
 {% if prev_date != curr_date or forloop.first == true %}
-
-
-  <h2>
-    <span class="archive-date">{{ post.date | date: "%B" }}</span>
-    </h2>
-    {% endif %}
-    <li>
-    <a class="archive-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-  </li>
+<h2>
+<span>{{ post.date | date: "%B" }}</span>
+</h2>
+{% endif %}
+        
+<li class="no-bullets">
+<h3>
+<a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+<span><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | month_ordinal }}</time></span>
+</li>
 {% endfor %}
 </ul>

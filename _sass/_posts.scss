@@ -89,24 +89,9 @@
   clear: both;
 }
 
-// Styling for archive pages
-.archive-title {
-  display: inline;
-  font-size: larger;
-}
-
-.archive-date {
-  display: inline;
-  font-size: 95%;
-  color: #8c8c8c;
-}
-
-.archive-month-date {
-  color: #8c8c8c;
-}
-
-.archive-month-title {
-  font-size: larger;
+// Hide bullets for unordered lists
+.no-bullets {
+  list-style-type: none;
 }
 
 // Related posts

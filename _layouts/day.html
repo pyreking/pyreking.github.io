@@ -6,7 +6,10 @@ layout: default
 
 <ul class="posts">
 {% for post in page.posts %}
-<li>
-    <a class="archive-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
+<li class="no-bullets">
+<h2>
+    <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+</h2>
+</li>
 {% endfor %}
 </ul>
