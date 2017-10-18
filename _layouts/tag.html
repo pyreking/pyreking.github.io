@@ -1,13 +1,14 @@
 ---
 layout: default
 ---
-<h2>Posts tagged “{{ page.title }}”</h2>
+<h1>Posts tagged “{{ page.title }}”</h2>
 <ul class="posts">
   {% for post in page.posts %}
-    <li class="archive_list">
-     <a class="archive_list_article_link" href="{{ post.url | prepend: site.baseurl }}">
-      <span class="archive-title">{{ post.title }}</a></span>
-      <span class="archive-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+    <li class="no-bullets">
+     <a href="{{ post.url | prepend: site.baseurl }}">
+      <h2>
+      <span>{{ post.title }}</a></span></h2>
+      <span><date datetime="{{ post.date | date_to_xmlschema }}" class="post-date"> {{ post.date | ordinal }}</time></span>
     </li>
   {% endfor %}
 </ul>

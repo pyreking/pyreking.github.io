@@ -10,5 +10,5 @@ permalink: /archive/
         {{ post.title }}
       </a>
     </h2>
-    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | ordinal }}</time>
+    <span><time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | ordinal }}</time></span>
 {% endfor %}
