@@ -12,7 +12,7 @@ namespace :blog do
   # We built this little rake task to help make that a little bit eaiser.
   #
 
-  # Usaage:
+  # Usage:
   # bundle exec rake blog:publish
   desc "Publish blog to gh-pages"
   task :publish do
@@ -44,8 +44,11 @@ namespace :blog do
 
       # Push the files to the gh-pages branch, forcing an overwrite.
       system "git push origin master:refs/heads/master --force"
-    end
-    
+    end    
     # Done.
+  end
+  
+  task :source do
+      system "git push -u origin master:source"
   end
 end
