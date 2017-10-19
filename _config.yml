@@ -9,6 +9,13 @@ baseurl:             ""
 
 exclude: [Rakefile]
 
+# Name of repository, for use with Staticman
+repository: "pyreking/pyreking.github.io"
+
+# Staticman comments (see staticman.yml for configuration).
+staticman:
+  branch: "master"
+
 # Assets
 #
 # We specify the directory for Jekyll so we can use @imports.
@@ -21,11 +28,6 @@ author:
   name:              Austin Guiney
   url:               https://twitter.com/SenorKoffey
   email:             austin.guiney@gmail.com
-
-# Custom vars
-version:             2.0.0
-github:
-  repo:              https://github.com/pyreking.github.io
 
 # Gems
 plugins:
