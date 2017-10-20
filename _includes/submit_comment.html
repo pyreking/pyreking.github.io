@@ -1,14 +1,23 @@
+<link rel="stylesheet" href="/../../../css/switch.css">
+
 <!-- Comment form -->
 <h3>Post a comment:</h3>
 <form method="POST" action="https://api.staticman.net/v2/entry/{{ site.repository }}/{{ site.staticman.branch }}/comments">
-  <input name="options[redirect]" type="hidden" value="{{ page.url | absolute_url }}">
+  <input name="options[redirect]" type="hidden" value="https://idiologos.netlify.com">
   <input name="options[slug]" type="hidden" value="{{ page.slug }}">
   <div>
     <legend>Name</legend>
     <input name="fields[name]" type="text">
   </div>
+  
   <div>
-    <legend>Message (<a href="https://kramdown.gettalong.org/syntax.html">kramdown</a> markup allowed)</legend>
+    <legend>Message (Formatting help
+
+    <!-- Markdown help switch-->
+    <label class="switch"> <input type="checkbox"> <span class="slider round"></span></label>)
+    </legend>
+    
+    <!-- Message box -->
     <textarea style="width:100%" name="fields[message]" rows="12"></textarea>
   </div>
   
