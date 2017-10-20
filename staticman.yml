@@ -16,7 +16,7 @@ comments:
   branch: "master"
 
   # Text to use as the commit message or pull request title. Accepts placeholders.
-  commitMessage: "Add new comment(s)."
+  commitMessage: "New comment."
 
   # (*) REQUIRED
   #
