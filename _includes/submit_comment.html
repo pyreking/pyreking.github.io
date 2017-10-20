@@ -1,28 +1,46 @@
 <link rel="stylesheet" href="/../../../css/switch.css">
 
+{% unless page.comments_locked == true %}
 <!-- Comment form -->
-<h3>Post a comment:</h3>
+<h3>Leave a comment</h3>
 <form method="POST" action="https://api.staticman.net/v2/entry/{{ site.repository }}/{{ site.staticman.branch }}/comments">
-  <input name="options[redirect]" type="hidden" value="https://idiologos.netlify.com">
+  <input name="options[redirect]" type="hidden" value="{{ page.url | absolute_url }}">
   <input name="options[slug]" type="hidden" value="{{ page.slug }}">
   <div>
     <legend>Name</legend>
     <input name="fields[name]" type="text">
   </div>
   
+  <input type="hidden" id="comment-replying-to" name="fields[replying_to]" value="">
+  <input type="hidden" id="comment-post-id" name="options[slug]" value="{{ page.slug }}">
+  
   <div>
     <legend>Message (Formatting help
 
     <!-- Markdown help switch-->
-    <label class="switch"> <input type="checkbox"> <span class="slider round"></span></label>)
+    <label class="switch"> <input type="checkbox" onload="hideTable();" onclick="toggleTable();"> <span class="slider round"></span></label>)
     </legend>
+    
+    {% include kramdown_help.html %}
+    
+    <script type="text/javascript">
+	function toggleTable() {
+	
+    var lTable = document.getElementById("formatting-help");
+    lTable.style.display = (lTable.style.display == "table") ? "none" : "table";
+    
+	}
+	</script>
     
     <!-- Message box -->
     <textarea style="width:100%" name="fields[message]" rows="12"></textarea>
   </div>
   
   <div>
-    <legend><em>Comments will appear after moderation.</em></legend>
+    <legend>Comments will appear after moderation.</legend>
     <button type="submit">Submit Comment</button>
   </div>
 </form>
+{% else %}
+<p class="important">Comments are closed.</p>
+{% endunless %}

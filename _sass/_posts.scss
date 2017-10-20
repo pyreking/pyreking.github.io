@@ -94,11 +94,36 @@
   list-style-type: none;
 }
 
+// Small text
+.smaller {
+  font-size: smaller;
+}
+
+// Flip the fa-reply icon over to the right
+i.fa-reply {
+  -webkit-transform:rotateY(180deg);
+  -moz-transform:rotateY(180deg);
+  -o-transform:rotateY(180deg);
+  -ms-transform:rotateY(180deg);
+}
+
+// Styling for comment reply link
+.comment-reply {
+  font-size: smaller;
+  color: #6E6E6E;
+  font-weight: bolder;
+}
+
 // Related posts
 .related {
   border-top: 2px solid #cfcfcf;
   border-bottom: 2px solid #cfcfcf;
   margin-top: -0.4rem;
+}
+
+.help-table {
+  margin-top: 0.5rem;
+  display: none;
 }
 
 .related-posts {

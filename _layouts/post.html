@@ -22,16 +22,15 @@ layout: default
 {% if site.related_posts != empty %}
 <aside class="related">
   <h2>Related posts</h2>
+  
   <ul class="related-posts">
     {% for post in site.related_posts limit:3 %}
-      <li>
+    <li>
 	<h3>
-        <a href="{{ site.baseurl }}{{ post.url }}">
-          {{ post.title }}</a>
-          <small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%m/%d/%y" }}</time></small>
-        
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+        <small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%m/%d/%y" }}</time></small>
 	</h3>
-      </li>
+    </li>
     {% endfor %}
   </ul>
 </aside>
@@ -40,5 +39,9 @@ layout: default
 <!-- About the author-->
 {% include about_author.html %}
 
+{% if page.comments == true %}
 {% include display_comments.html %}
 {% include submit_comment.html %}
+{% else %}
+<p class="important" style="padding-top: 1rem;">Comments have been disabled for this post.</p>
+{% endif %}
