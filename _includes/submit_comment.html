@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="/../../../css/switch.css">
+<script src="/../../../js/hide-table.js"></script>
 
 {% unless page.comments_locked == true %}
 <!-- Comment form -->
@@ -7,7 +8,7 @@
   <input name="options[redirect]" type="hidden" value="{{ page.url | absolute_url }}">
   <input name="options[slug]" type="hidden" value="{{ page.slug }}">
   <div>
-    <legend>Name</legend>
+    <legend><h4>Name</h4></legend>
     <input name="fields[name]" type="text">
   </div>
   
@@ -15,22 +16,12 @@
   <input type="hidden" id="comment-post-id" name="options[slug]" value="{{ page.slug }}">
   
   <div>
-    <legend>Message (Formatting help
+    <legend><h4 style="display:inline-block;">Message</h4> (formatting help
 
     <!-- Markdown help switch-->
-    <label class="switch"> <input type="checkbox" onload="hideTable();" onclick="toggleTable();"> <span class="slider round"></span></label>)
-    </legend>
+    <label class="switch"> <input type="checkbox" onload="hideTable();" onclick="toggleTable();"> <span class="slider round"></span></label>)</legend>
     
     {% include kramdown_help.html %}
-    
-    <script type="text/javascript">
-	function toggleTable() {
-	
-    var lTable = document.getElementById("formatting-help");
-    lTable.style.display = (lTable.style.display == "table") ? "none" : "table";
-    
-	}
-	</script>
     
     <!-- Message box -->
     <textarea style="width:100%" name="fields[message]" rows="12"></textarea>
