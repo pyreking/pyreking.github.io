@@ -1,3 +1,7 @@
+# Copyright (c) 2012 Christopher Orr.
+# Modifications Copyright (c) 2017 Austin Guiney
+# MIT Licensed
+
 require 'date'
 require 'facets/integer/ordinal'
 
