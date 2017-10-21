@@ -19,13 +19,16 @@ title: Home
 
 <div class="pagination">
   {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older</a>
+    <a class="pagination-item older" title="Previous" href="{{ paginator.next_page_path | prepend: site.baseurl }}"><i class="fa fa-arrow-left" aria-hidden="true" style="color:#585858"></i>
+</a>
   {% else %}
-    <span class="pagination-item older">Older</span>
+    <span class="pagination-item older"><i class="fa fa-arrow-left" aria-hidden="true" style="color:#F2F2F2"></i></span>
   {% endif %}
   {% if paginator.previous_page %}
-    <a class="pagination-item newer" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Newer</a>
+    <a class="pagination-item newer" title="Next" href="{{ paginator.previous_page_path | prepend: site.baseurl }}"><i class="fa fa-arrow-right" aria-hidden="true" style="color:#585858"></i>
+</a>
   {% else %}
-    <span class="pagination-item newer">Newer</span>
+    <span class="pagination-item newer"><i class="fa fa-arrow-right" aria-hidden="true" style="color:#F2F2F2"></i>
+</span>
   {% endif %}
 </div>
