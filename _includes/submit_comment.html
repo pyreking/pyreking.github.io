@@ -16,18 +16,17 @@
   <input type="hidden" id="comment-post-id" name="options[slug]" value="{{ page.slug }}">
   
   <div>
-   <h4 style="display:inline-block;">Message</h4> formatting help
-
+   <h4 style="display:inline-block;">Message</h4> (formatting help
+   
     <!-- Markdown help switch-->
     <div class="onoffswitch">
-        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch">
+        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" onclick="toggleTable();">
         <label class="onoffswitch-label" for="myonoffswitch">
             <span class="onoffswitch-inner"></span>
             <span class="onoffswitch-switch"></span>
         </label>
-    </div>
+    </div>)
 
-    
     {% include kramdown_help.html %}
     
     <!-- Message box -->
