@@ -23,7 +23,8 @@
     <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ comment[1].date | date: "%m/%d/%y" }}</time>
     </span>
     </legend>
-    {{ comment[1].message | markdownify }}
+    
+    {{ comment[1].message | markdownify | whitelist}}
     
     <div class="comment-reply">
     <a class="normal" onclick="">
