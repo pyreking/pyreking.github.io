@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="/../../../css/switch.css">
-<script src="/../../../js/hide-table.js"></script>
+<script src="/../../../js/toggle-table.js"></script>
+<script src="/../../../js/jquery-3.2.1.slim.min.js"></script>
 
 {% unless page.comments_locked == true %}
 <!-- Comment form -->
@@ -9,29 +10,34 @@
   <input name="options[slug]" type="hidden" value="{{ page.slug }}">
   <div>
     <legend><h4>Name</h4></legend>
-    <input name="fields[name]" type="text">
+    <input name="fields[name]" type="text" maxlength="20" required>
   </div>
   
-  <input type="hidden" id="comment-replying-to" name="fields[replying_to]" value="">
-  <input type="hidden" id="comment-post-id" name="options[slug]" value="{{ page.slug }}">
+  <h4 id="government-contact-info">If you work for the government, 
+  please give me your name and address.</h4></legend>
+  <input type="text" id="government-contact-info" name="fields[address]" autocomplete="off"/>
   
   <div>
    <h4 style="display:inline-block;">Message</h4> (formatting help
    
     <!-- Markdown help switch-->
     <div class="onoffswitch">
-        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" onclick="toggleTable();">
+        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" onclick="toggleTable();" spellcheck="true">
         <label class="onoffswitch-label" for="myonoffswitch">
             <span class="onoffswitch-inner"></span>
             <span class="onoffswitch-switch"></span>
         </label>
     </div>)
 
-    {% include kramdown_help.html %}
+    {% include formatting_help.html %}
     
     <!-- Message box -->
-    <textarea style="width:100%" name="fields[message]" rows="12"></textarea>
+    <textarea style="width:100%;resize:none;" name="fields[message]" rows="12" minlength="9" maxlength="900" required"></textarea>
   </div>
+
+<span id="remaining">900</span> characters remaining
+
+<script src="/../../../js/character-count.js"></script>
   
   <div>
     <legend>Comments will appear after moderation.</legend>
