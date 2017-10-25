@@ -116,9 +116,11 @@ i.fa-reply {
 
 // Related posts
 .related {
-  border-top: 2px solid #cfcfcf;
-  border-bottom: 2px solid #cfcfcf;
-  margin-top: -0.4rem;
+  margin: 0;
+}
+
+.comments {
+
 }
 
 .help-table {
@@ -134,6 +136,7 @@ i.fa-reply {
 .related-posts {
   padding-left: 0;
   list-style: none;
+  padding-top: 0.5rem;
 
   h3 {
     margin-top: 0;
