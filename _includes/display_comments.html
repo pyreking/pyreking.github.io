@@ -4,27 +4,27 @@
 <!-- Also partly based on Eduardo Boucas' reviews.html file -->
 <!-- https://github.com/eduardoboucas/popcorn/blob/gh-pages/_includes/reviews.html -->
 
-{% if site.data.comments[page.slug] %}
-    {% if site.data.comments[page.slug].size > 1 %}
-    <h3>{{ site.data.comments[page.slug] | size }} Comments</h3>
+{% assign comments = site.data.comments[page.slug] %}
+{% assign sorted = comments | sort: "date" %}
+
+{% if comments %}
+    {% if comments.size > 1 %}
+    <h3>{{ comments | size }} Comments</h3>
     {% endif %}
     
-    {% if site.data.comments[page.slug].size == 1 %}
+    {% if comments.size == 1 %}
     <h3>1 Comment</h3>
     {% endif %}
-	
-  {% assign comments = site.data.comments[page.slug] | sort %}
 
-  {% for comment in comments %}
+   {% for comment in comments %}
     <legend><h4>{{ comment[1].name }}</h4></legend>
     
     <legend>
     <span class="smaller">
-    <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ comment[1].date | date: "%m/%d/%y" }}</time>
+    <time datetime="{{ comment[1].date | date_to_xmlschema }}" class="post-date">{{ comment[1].date | date: "%m/%d/%y" }}</time>
     </span>
     </legend>
-    
-    {{ comment[1].message | markdownify | whitelist}}
+    {{ comment[1].message | markdownify | whitelist | censor}}
     
     <div class="comment-reply">
     <a class="normal" onclick="">
