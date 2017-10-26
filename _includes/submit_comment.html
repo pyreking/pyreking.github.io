@@ -4,7 +4,8 @@
 
 {% unless page.comments_locked == true %}
 <!-- Comment form -->
-<h3>Leave a comment</h3>
+<div id="comment-form">
+<h3 id ="form-title" class="comments">Leave a comment</h3>
 <form method="POST" action="https://api.staticman.net/v2/entry/{{ site.repository }}/{{ site.staticman.branch }}/comments">
   <input name="options[redirect]" type="hidden" value="{{ page.url | absolute_url }}">
   <input name="options[slug]" type="hidden" value="{{ page.slug }}">
@@ -12,6 +13,9 @@
     <legend><h4>Name</h4></legend>
     <input name="fields[name]" type="text" maxlength="20" required>
   </div>
+  
+  <input type="hidden" id="replying-to" name="fields[replying_to]" value="">
+  <input type="hidden" id="depth-level" name="fields[depth_level]" value="0">
   
   <h4 id="government-contact-info">If you work for the government, 
   please give me your name and address.</h4></legend>
@@ -44,6 +48,8 @@
     <button type="submit">Submit Comment</button>
   </div>
 </form>
+</div>
 {% else %}
+<br>
 <p class="important">Comments are closed.</p>
 {% endunless %}

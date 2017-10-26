@@ -4,8 +4,10 @@
 <!-- Also partly based on Eduardo Boucas' reviews.html file -->
 <!-- https://github.com/eduardoboucas/popcorn/blob/gh-pages/_includes/reviews.html -->
 
+<script src="/../../../js/reply-to-comment.js"></script>
+<script src="/../../../js/jquery-3.2.1.slim.min.js"></script>
+
 {% assign comments = site.data.comments[page.slug] %}
-{% assign sorted = comments | sort: "date" %}
 
 {% if comments %}
     {% if comments.size > 1 %}
@@ -26,10 +28,19 @@
     </legend>
     {{ comment[1].message | markdownify | whitelist | censor}}
     
-    <div class="comment-reply">
-    <a class="normal" onclick="">
-    <i class="fa fa-reply" aria-hidden="true"></i> Reply to {{ comment[1].name }}</a>
+    <div class="append-comment-reply-form">
+    <div class="comment-reply" style="cursor:pointer;">
+    <a class="normal" id="{{ comment[1]._id }}" onclick="reply(id);">
+    <i class="fa fa-reply" aria-hidden="true"></i>&nbsp;Reply to {{ comment[1].name }}</a>
     </div>
-    
+    <div class="close-reply">
+    <a class="normal" style="cursor:pointer;" onclick="closeReply();">
+    <i class="fa fa-times" aria-hidden="true"></i>&nbsp;&nbsp;Close</a>
+    </div>
+    </div>
   {% endfor %}
+  
+  <div id="append-comment-form">
+  {% include submit_comment.html %}
+  </div>
 {% endif %}
