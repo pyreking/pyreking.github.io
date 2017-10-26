@@ -70,7 +70,6 @@
   display: block;
   padding-bottom: 1.10rem;
   margin-bottom: 1rem;
-  border-bottom: 2px solid #cfcfcf;
 }
 
 // Styling for author image
@@ -107,6 +106,15 @@ i.fa-reply {
   -ms-transform:rotateY(180deg);
 }
 
+
+.close-reply {
+  font-size: smaller;
+  color: #6E6E6E;
+  font-weight: bolder;
+  cursor: pointer;
+  display: none;
+}
+
 // Styling for comment reply link
 .comment-reply {
   font-size: smaller;
@@ -117,6 +125,9 @@ i.fa-reply {
 // Related posts
 .related {
   margin: 0;
+  border-top: 2px solid #cfcfcf;
+  border-bottom: 2px solid #cfcfcf;
+  margin-top: -0.4rem;
 }
 
 .comments {
