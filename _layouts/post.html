@@ -40,8 +40,13 @@ layout: default
 {% include about_author.html %}
 
 {% if page.comments == true %}
+
+{% if site.data.comments[page.slug].size > 0 %}
 {% include display_comments.html %}
+{% else %}
 {% include submit_comment.html %}
+{% endif %}
+
 {% else %}
 <p class="important" style="padding-top: 1rem;">Comments have been disabled for this post.</p>
 {% endif %}
