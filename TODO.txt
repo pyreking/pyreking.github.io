@@ -1,0 +1,6 @@
+- Add an option to subscribe to my SendInBlue mailing list.
+- Make nested comments work.
+- Maybe add a contact page.
+- Archive pages for authors (maybe)
+- sitemap
+- sort tags on post by alphabet
