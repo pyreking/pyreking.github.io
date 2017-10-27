@@ -1,21 +1,17 @@
 function reply(id) {
-	document.getElementById("replying-to").value = id;
-	var depthLevel = document.getElementById("depth-level").value;
-	if (depthLevel < 3) {
-		document.getElementById("depth-level").value++;
-	}
-	document.getElementById("form-title").innerText = "Leave a reply";
 	var topParent = document.getElementById(id).parentElement.parentElement;
+	document.getElementById("parent").value = id;
+	document.getElementById("depth").value++;
+	document.getElementById("form-title").innerText = "Leave a reply";
 	var commentForm = document.getElementById("comment-form");
 	topParent.append(commentForm);
-	$(".close-reply").hide();
-	$(".close-reply").show();
+	$(topParent.children[1]).show();
 }
 
 function closeReply() {
 	document.getElementById("form-title").innerText = "Leave a comment";
-	document.getElementById("replying-to").value = "";
-	document.getElementById("depth-level").value = "0";
+	document.getElementById("parent").value = "";
+	document.getElementById("depth").value = "0";
 	var commentForm = document.getElementById("comment-form");
 	var endOfDocument = document.getElementById("append-comment-form");
 	endOfDocument.append(commentForm);
