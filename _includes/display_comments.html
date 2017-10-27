@@ -7,7 +7,7 @@
 <script src="/../../../js/reply-to-comment.js"></script>
 <script src="/../../../js/jquery-3.2.1.slim.min.js"></script>
 
-{% assign comments = site.data.comments[page.slug] %}
+{% assign comments = site.data.comments[page.slug] | sort_comments,"name" %}
 
 {% if comments %}
     {% if comments.size > 1 %}
@@ -19,25 +19,28 @@
     {% endif %}
 
    {% for comment in comments %}
-    <legend><h4>{{ comment[1].name }}</h4></legend>
+    <legend><h4>{{ comment.name }}</h4></legend>
     
     <legend>
     <span class="smaller">
-    <time datetime="{{ comment[1].date | date_to_xmlschema }}" class="post-date">{{ comment[1].date | date: "%m/%d/%y" }}</time>
+    <time datetime="{{ comment.date | date_to_xmlschema }}" class="post-date">{{ comment.date | date: "%m/%d/%y" }}</time>
     </span>
     </legend>
-    {{ comment[1].message | markdownify | whitelist | censor}}
+    {{ comment.message | markdownify | whitelist | censor}}
     
+    {% if comment.depth < '3' %}
     <div class="append-comment-reply-form">
     <div class="comment-reply" style="cursor:pointer;">
-    <a class="normal" id="{{ comment[1]._id }}" onclick="reply(id);">
-    <i class="fa fa-reply" aria-hidden="true"></i>&nbsp;Reply to {{ comment[1].name }}</a>
+    
+    <a class="normal" id="{{ comment[1]._id }}" onclick="reply(id)">
+    <i class="fa fa-reply" aria-hidden="true"></i>&nbsp;Reply to {{ comment.name }}</a>
     </div>
     <div class="close-reply">
-    <a class="normal" style="cursor:pointer;" onclick="closeReply();">
+    <a class="normal" onclick="closeReply();">
     <i class="fa fa-times" aria-hidden="true"></i>&nbsp;&nbsp;Close</a>
     </div>
     </div>
+    {% endif %}
   {% endfor %}
   
   <div id="append-comment-form">
