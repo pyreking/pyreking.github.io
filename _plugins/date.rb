@@ -2,6 +2,8 @@
 # Modifications Copyright (c) 2017 Austin Guiney
 # MIT Licensed
 
+# This plugin only works with the iso8601 format.
+
 require 'date'
 require 'facets/integer/ordinal'
 
@@ -12,10 +14,10 @@ module Jekyll
     end 
     def short_ordinal(date)
      "#{date.strftime('%b')} #{date.strftime('%e').to_i.ordinalize}, #{date.strftime('%Y')}"
-     end
-     def month_ordinal(date)
+    end
+    def month_ordinal(date)
      "#{date.strftime('%B')} #{date.strftime('%e').to_i.ordinalize}"
-     end
+    end
   end
 end
 
