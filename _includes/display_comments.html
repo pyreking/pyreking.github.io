@@ -7,7 +7,7 @@
 <script src="/../../../js/reply-to-comment.js"></script>
 <script src="/../../../js/jquery-3.2.1.slim.min.js"></script>
 
-{% assign comments = site.data.comments[page.slug] | sort_comments,"name" %}
+{% assign comments = site.data.comments[page.slug] | sort_comments,'date' | sort_children %}
 
 {% if comments %}
     {% if comments.size > 1 %}
@@ -23,7 +23,7 @@
     
     <legend>
     <span class="smaller">
-    <time datetime="{{ comment.date | date_to_xmlschema }}" class="post-date">{{ comment.date | date: "%m/%d/%y" }}</time>
+    <time datetime="{{ comment.date | date_to_xmlschema }}" class="post-date">{{ comment.date | ordinal }}</time>
     </span>
     </legend>
     {{ comment.message | markdownify | whitelist | censor}}
