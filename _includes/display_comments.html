@@ -7,7 +7,7 @@
 <script src="/../../../js/reply-to-comment.js"></script>
 <script src="/../../../js/jquery-3.2.1.slim.min.js"></script>
 
-{% assign comments = site.data.comments[page.slug] | sort_comments,'date' | sort_children %}
+{% assign comments = site.data.comments[page.slug] | sort_comments,'date' | reverse | sort_children %}
 
 {% if comments %}
     {% if comments.size > 1 %}
@@ -17,8 +17,9 @@
     {% if comments.size == 1 %}
     <h3>1 Comment</h3>
     {% endif %}
-
+    
    {% for comment in comments %}
+   
     <legend><h4>{{ comment.name }}</h4></legend>
     
     <legend>
@@ -28,11 +29,11 @@
     </legend>
     {{ comment.message | markdownify | whitelist | censor}}
     
-    {% if comment.depth < '3' %}
+    {% if comment.depth < '1' %}
     <div class="append-comment-reply-form">
     <div class="comment-reply" style="cursor:pointer;">
     
-    <a class="normal" id="{{ comment[1]._id }}" onclick="reply(id)">
+    <a class="normal" id="{{ comment._id }}" onclick="reply(id)">
     <i class="fa fa-reply" aria-hidden="true"></i>&nbsp;Reply to {{ comment.name }}</a>
     </div>
     <div class="close-reply">
