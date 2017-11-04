@@ -1,13 +1,23 @@
+{% comment %}
 <!-- Static comments -->
 <!-- Partly based on Made Mistakes' comments.html file: -->
 <!-- https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/comments.html -->
 <!-- Also partly based on Eduardo Boucas' reviews.html file -->
 <!-- https://github.com/eduardoboucas/popcorn/blob/gh-pages/_includes/reviews.html -->
+{% endcomment %}
 
 <script src="/../../../js/reply-to-comment.js"></script>
 <script src="/../../../js/jquery-3.2.1.slim.min.js"></script>
 
+{% comment %}
+<!-- Get all of the comments, and sort them by reverse chronological order. Child comments are directly below parent comments. -->
+{% endcomment %}
+
 {% assign comments = site.data.comments[page.slug] | sort_comments,'date' | reverse | sort_children %}
+
+{% comment %}
+<!-- Display the number of comments -->
+{% endcomment %}
 
 {% if comments %}
     {% if comments.size > 1 %}
@@ -20,31 +30,80 @@
     
    {% for comment in comments %}
    
-    <legend><h4>{{ comment.name }}</h4></legend>
-    
+   {% comment %}
+   <!-- Get the name of the author. -->
+   {% endcomment %}
+   
+   {% assign post_author = site.data.authors[page.author] %}
+   
+   {% comment %}
+<!-- The admin's name has an orange star. -->
+   {% endcomment %}
+   
+   {% if comment.name == site.author.name %}
+   <legend><h4 class="important-comment-author" id="{{ comment._id }}">{{ comment.name }}</h4> <i class="fa fa-star" style="color:#FF8000" title="Admin" aria-hidden="true"></i>
+</legend>
+
+    {% comment %}
+<!-- The author's name has a purple star. -->
+    {% endcomment %}
+
+   {% elsif comment.name == post_author.name %}
+    <legend><h4 class="important-comment-author" id="{{ comment._id }}">{{ comment.name }}</h4> <i class="fa fa-star" style="color:#7401DF;" title="Author" aria-hidden="true"></i>
+</legend></legend>
+
+   {% comment %}
+<!-- Normal names have no star. -->
+  {% endcomment %}
+
+	{% else %}
+	<legend><h4 class="comment-author" id="{{ comment._id }}">{{ comment.name }}</h4></legend>
+   {% endif %}
+     
     <legend>
     <span class="smaller">
-    <time datetime="{{ comment.date | date_to_xmlschema }}" class="post-date">{{ comment.date | ordinal }}</time>
+    <time datetime="{{ comment.date | date_to_xmlschema }}" class="comment-date">{{ comment.date | ordinal }}</time>
     </span>
     </legend>
+    
+    {% comment %}
+    <!-- The maximum reply depth is 1. Add a link to the parent comment. -->
+    {% endcomment %}
+    
+    {% if comment.depth >= '1' %}
+   		<div class="comment-response"><a href="#{{ comment.parent_id }}" style="color:green;cursor:pointer;" parent_id="{{ comment.parent_id }}" title="Responding to {{ comment.parent_name }}"><i class="fa fa-reply" aria-hidden="true" ></i> Responding to {{ comment.parent_name }} </a></div> 
+    {% endif %}
+    
+    {% comment %}
+    <!-- Censor offensive words, except for a few whitelisted words. -->
+    {% endcomment %}
+    
     {{ comment.message | markdownify | whitelist | censor}}
     
     {% if comment.depth < '1' %}
-    <div class="append-comment-reply-form">
-    <div class="comment-reply" style="cursor:pointer;">
+    <div class="append-reply-form" id="reply-to-{{ comment._id }}">
+    <div class="comment-reply">
     
-    <a class="normal" id="{{ comment._id }}" onclick="reply(id)">
+    {% comment %}
+    <!-- Move the comment box up if you click on "reply." Move it back down if you click "close." -->
+    {% endcomment %}
+    
+    <a href="javascript:void(0);" style="cursor:pointer;" title="Reply to {{ comment.name }}" onclick="reply('{{ comment._id }}')">
     <i class="fa fa-reply" aria-hidden="true"></i>&nbsp;Reply to {{ comment.name }}</a>
     </div>
     <div class="close-reply">
-    <a class="normal" onclick="closeReply();">
+    <a href="javascript:void(0);" style="cursor:pointer;" onclick="closeReply();" title="Close reply">
     <i class="fa fa-times" aria-hidden="true"></i>&nbsp;&nbsp;Close</a>
     </div>
     </div>
     {% endif %}
   {% endfor %}
   
-  <div id="append-comment-form">
+  {% comment %}
+  <!-- Add a comment submit box -->
+  {% endcomment %}
+  
+  <div id="comment-submission-form">
   {% include submit_comment.html %}
   </div>
 {% endif %}
