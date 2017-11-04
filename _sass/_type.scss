@@ -35,6 +35,19 @@ h4, h5, h6 {
   font-size: 1rem;
 }
 
+h4.comment-author {
+  margin-top: 0.65rem;
+  font-size: 1rem;
+  margin-bottom: 0rem;
+}
+
+h4.important-comment-author {
+  display: inline-block;
+  margin-top: 0.65rem;
+  font-size: 1rem;
+  margin-bottom: 0rem;
+}
+
 a.normal {
   color: inherit;
 }
