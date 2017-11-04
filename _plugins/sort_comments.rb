@@ -1,8 +1,5 @@
 # Copyright (c) 2017 Austin Guiney.
 # MIT Licensed
-require 'pp'
-require 'rails'
-require 'sparsify'
 
 module Jekyll
   module SortComments
@@ -14,17 +11,17 @@ module Jekyll
       return hashes
     end
     
-    # Returns a tree-based data structure for comments
+    # Returns a parent-child comment structure with a maximum depth of 1.
     def sort_children(comments)
     	sorted = []
-    	children = comments.select{|k,v| k["parent"] != ""}
+    	children = comments.select{|k,v| k["parent_id"] != ""}
     	
     	for i in comments
-    		if i["parent"] == ""
+    		if i["parent_id"] == ""
     			sorted << i
     		end
     		for j in children
-    			if i["_id"] == j["parent"]
+    			if i["_id"] == j["parent_id"]
     				sorted << j
     			end
     		end
