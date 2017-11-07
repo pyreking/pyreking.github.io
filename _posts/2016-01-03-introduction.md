@@ -2,7 +2,7 @@
 layout: post
 title: Introduction
 author: aguiney
-tags: pizza yogurt custard yolo
+tags: jekyll
 comments: true
 ---
 
