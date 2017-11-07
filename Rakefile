@@ -1,3 +1,6 @@
+# Copyright (c) 2016 Alex Gil.
+# MIT Licensed
+
 # Rquire jekyll to compile the site.
 require "jekyll"
 require "tmpdir"

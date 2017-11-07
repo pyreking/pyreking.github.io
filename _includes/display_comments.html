@@ -1,9 +1,9 @@
 {% comment %}
-<!-- Static comments -->
-<!-- Partly based on Made Mistakes' comments.html file: -->
-<!-- https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/comments.html -->
-<!-- Also partly based on Eduardo Boucas' reviews.html file -->
-<!-- https://github.com/eduardoboucas/popcorn/blob/gh-pages/_includes/reviews.html -->
+<!-- Copyright (c) Eduardo Boucas 2016. -->
+<!-- Copyright (c) Michael Rose 2017. -->
+<!-- Copyright (c) Andreas Faerber 2017.
+<!-- Copyright (c) Austin Guiney 2017. -->
+<!-- MIT Licensed -->
 {% endcomment %}
 
 <script src="/../../../js/reply-to-comment.js"></script>
@@ -41,7 +41,7 @@
    {% endcomment %}
    
    {% if comment.name == site.author.name %}
-   <legend><h4 class="important-comment-author" id="{{ comment._id }}">{{ comment.name }}</h4> <i class="fa fa-star" style="color:#FF8000" title="Admin" aria-hidden="true"></i>
+   <legend><h4 class="important-comment-author" id="{{ comment._id }}">{{ comment.name }}</h4> <i class="icon icon-star" style="color:#FF8000" title="Admin" aria-hidden="true"></i>
 </legend>
 
     {% comment %}
@@ -49,7 +49,7 @@
     {% endcomment %}
 
    {% elsif comment.name == post_author.name %}
-    <legend><h4 class="important-comment-author" id="{{ comment._id }}">{{ comment.name }}</h4> <i class="fa fa-star" style="color:#7401DF;" title="Author" aria-hidden="true"></i>
+    <legend><h4 class="important-comment-author" id="{{ comment._id }}">{{ comment.name }}</h4> <i class="icon icon-star" style="color:#7401DF;" title="Author" aria-hidden="true"></i>
 </legend></legend>
 
    {% comment %}
@@ -71,7 +71,7 @@
     {% endcomment %}
     
     {% if comment.depth >= '1' %}
-   		<div class="comment-response"><a href="#{{ comment.parent_id }}" style="color:green;cursor:pointer;" parent_id="{{ comment.parent_id }}" title="Responding to {{ comment.parent_name }}"><i class="fa fa-reply" aria-hidden="true" ></i> Responding to {{ comment.parent_name }} </a></div> 
+   		<div class="comment-response"><a href="#{{ comment.parent_id }}" style="color:green;cursor:pointer;" parent_id="{{ comment.parent_id }}" title="Responding to {{ comment.parent_name }}"><i class="icon icon-reply" aria-hidden="true" ></i> Responding to {{ comment.parent_name }} </a></div> 
     {% endif %}
     
     {% comment %}
@@ -89,11 +89,11 @@
     {% endcomment %}
     
     <a href="javascript:void(0);" style="cursor:pointer;" title="Reply to {{ comment.name }}" onclick="reply('{{ comment._id }}')">
-    <i class="fa fa-reply" aria-hidden="true"></i>&nbsp;Reply to {{ comment.name }}</a>
+    <i class="icon icon-reply" aria-hidden="true"></i>&nbsp;Reply to {{ comment.name }}</a>
     </div>
     <div class="close-reply">
     <a href="javascript:void(0);" style="cursor:pointer;" onclick="closeReply();" title="Close reply">
-    <i class="fa fa-times" aria-hidden="true"></i>&nbsp;&nbsp;Close</a>
+    <i class="icon icon-times" aria-hidden="true"></i>&nbsp;&nbsp;Close</a>
     </div>
     </div>
     {% endif %}
