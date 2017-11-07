@@ -1,4 +1,4 @@
 function toggleTable() {
-	var lTable = document.getElementById("formatting-help");
-	lTable.style.display = (lTable.style.display == "table") ? "none" : "table";
+	var table = document.getElementById("formatting-help");
+	table.style.display = (table.style.display == "table") ? "none" : "table";
 }
