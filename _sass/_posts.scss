@@ -56,17 +56,17 @@
 
 // Blue cloud for post tags
 .tag-style {
-   background: rgba(106,159,181,0.15);
-   padding: 0 .4rem;
-   border-radius: 4px;
+   background: #58ACFA;
+   padding: .1rem .5rem;
+   border-radius: 35px;
    font-size: 90%;
-   color: #6a9fb5;
+   color: white;
 }
 
 // Change color when hovering
 .tag-style:hover{
    text-decoration:none;
-   background:#6a9fb5;
+   background:#848484;
    color:#fff
 }
 
