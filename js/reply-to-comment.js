@@ -1,3 +1,6 @@
+/* Copyright (c) 2017 Austin Guiney.
+ * MIT Licensed */
+ 
 function reply(id) {
 	document.getElementById("parent_id").value = id;
 	document.getElementById("parent_name").value = document.getElementById(id).innerHTML;
