@@ -19,16 +19,14 @@ title: Home
 
 <div class="pagination">
   {% if paginator.next_page %}
-    <a class="pagination-item older" title="Previous" href="{{ paginator.next_page_path | prepend: site.baseurl }}"><i class="fa fa-arrow-left" aria-hidden="true" style="color:#585858"></i>
+    <a class="pagination-item next" title="Older posts" href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older posts
 </a>
   {% else %}
-    <span class="pagination-item older"><i class="fa fa-arrow-left" aria-hidden="true" style="color:#E6E6E6"></i></span>
+    <span class="pagination-item disabled">Older posts</span>
   {% endif %}
   {% if paginator.previous_page %}
-    <a class="pagination-item newer" title="Next" href="{{ paginator.previous_page_path | prepend: site.baseurl }}"><i class="fa fa-arrow-right" aria-hidden="true" style="color:#585858"></i>
-</a>
+    <a class="pagination-item previous" title="Newer posts" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Newer posts</a>
   {% else %}
-    <span class="pagination-item newer"><i class="fa fa-arrow-right" aria-hidden="true" style="color:#E6E6E6"></i>
-</span>
+    <span class="pagination-item disabled">Newer posts</span>
   {% endif %}
 </div>
