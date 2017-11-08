@@ -23,17 +23,11 @@
   margin-top: 0;
 }
 
-// Meta data line below post title
 .post-date {
   display: block;
   margin-top: -.5rem;
   margin-bottom: 0.6rem;
-  color: #9a9a9a;
-}
-
-.comment-date {
-  display: inline-block;
-  margin-top: -.5rem;
+  color: #848484;
 }
 
 .important {
@@ -50,13 +44,13 @@
 // Post tags
 .post-tags {
   display: block;
-  margin-top: -.5rem;
+  margin-top: -.4rem;
   margin-bottom: 1rem;
 }
 
 // Blue cloud for post tags
 .tag-style {
-   background: #58ACFA;
+   background: #0080FF;
    padding: .1rem .5rem;
    border-radius: 35px;
    font-size: 90%;
@@ -104,16 +98,44 @@
   font-size: smaller;
 }
 
+.pagination-comments {
+  margin-bottom: 0.4rem;
+  margin-top: -0.65rem;
+  color: #848484;
+}
+
 // Flip the fa-reply icon over to the right
-i.fa-reply {
+i.icon-reply {
   -webkit-transform:rotateY(180deg);
   -moz-transform:rotateY(180deg);
   -o-transform:rotateY(180deg);
   -ms-transform:rotateY(180deg);
 }
 
-i.fa-star {
-  display: inline;
+// Related to comments
+
+.comment-date {
+  display: inline-block;
+  margin-top: -.5rem;
+}
+
+.comment-message {
+  display: block;
+}
+
+.reply-to-comment {
+  padding-top: 0.2rem;
+  font-size: smaller;
+  color: #6E6E6E;
+  font-weight: bolder;
+}
+
+.child-comment {
+  display: block;
+  font-size: smaller;
+  margin-bottom: 0.2rem;
+  font-weight: bolder;
+  color: #6E6E6E;
 }
 
 .close-reply {
@@ -123,19 +145,13 @@ i.fa-star {
   display: none;
 }
 
-// Styling for comment reply link
-.comment-reply {
-  font-size: smaller;
-  color: #6E6E6E;
-  font-weight: bolder;
+.submit-comment {
+  padding-top: -.7rem;
 }
 
-.comment-response {
-  display: block;
-  font-size: smaller;
-  margin-bottom: 0.2rem;
-  font-weight: bolder;
-  color: #6E6E6E;
+// No new line for a star
+i.icon-star {
+  display: inline;
 }
 
 // Related posts
