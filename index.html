@@ -3,30 +3,49 @@ layout: default
 title: Home
 ---
 <div class="posts">
-  {% for post in paginator.posts %}
-  <article class="post">
-    <h1 class="post-title">
-      <a href="{{ site.baseurl }}{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </h1>
+<article class="post">
 
-    <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | ordinal }}</time>
-    {{ post.excerpt }}
-  </article>
-  {% endfor %}
-</div>
+{% for post in paginator.posts %}
+<h1 class="post-title">
+<a href="{{post.url | prepend: site.baseurl}}">
+{{ post.title }}</a></h1>
 
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item next" title="Older posts" href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older posts
-</a>
-  {% else %}
-    <span class="pagination-item disabled">Older posts</span>
-  {% endif %}
+<time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | ordinal }}</time>
+
+{% assign num_comments = site.data.comments[post.slug].size %}
+
+{% if num_comments >= 1 %}
+<div class="pagination-comments"><a class="normal" href="{{ post.url | absolute_url }}#comments"><i class="icon icon-comments-o" title="Comments"></i>&nbsp;{{ num_comments }}</a></div>
+{% endif %}
+{{ post.excerpt }}
+</article>
+{% endfor %}
+
+<!-- pagination -->
+{% if paginator.total_pages > 1 %}
+<div class="pagination"> 
   {% if paginator.previous_page %}
-    <a class="pagination-item previous" title="Newer posts" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Newer posts</a>
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">Prev</a>
   {% else %}
-    <span class="pagination-item disabled">Newer posts</span>
+    <span>Prev</span>
+  {% endif %}
+
+  {% for page in (1..paginator.total_pages) %}
+    {% if page == paginator.page %}
+      <span>{{ page }}</span>
+    {% elsif page == 1 %}
+      <a href="/">{{ page }}</a>
+    {% else %}
+      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+    {% endif %}
+  {% endfor %}
+
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next</a>
+  {% else %}
+    <span>Next</span>
   {% endif %}
 </div>
+
+</div>
+{% endif %}
