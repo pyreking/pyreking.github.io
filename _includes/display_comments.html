@@ -1,7 +1,7 @@
 {% comment %}
 <!-- Copyright (c) Eduardo Boucas 2016. -->
 <!-- Copyright (c) Michael Rose 2017. -->
-<!-- Copyright (c) Andreas Faerber 2017.
+<!-- Copyright (c) Andreas Faerber 2017. -->
 <!-- Copyright (c) Austin Guiney 2017. -->
 <!-- MIT Licensed -->
 {% endcomment %}
@@ -20,12 +20,9 @@
 {% endcomment %}
 
 {% if comments %}
-    {% if comments.size > 1 %}
-    <h3>{{ comments | size }} Comments</h3>
-    {% endif %}
-    
-    {% if comments.size == 1 %}
-    <h3>1 Comment</h3>
+    {% if comments.size >= 1 %}
+    <div id="comments"></div>
+    <h3><i class="icon icon-comments-o" title="Comments"></i> {{ comments | size }}</h3>
     {% endif %}
     
    {% for comment in comments %}
@@ -71,18 +68,20 @@
     {% endcomment %}
     
     {% if comment.depth >= '1' %}
-   		<div class="comment-response"><a href="#{{ comment.parent_id }}" style="color:green;cursor:pointer;" parent_id="{{ comment.parent_id }}" title="Responding to {{ comment.parent_name }}"><i class="icon icon-reply" aria-hidden="true" ></i> Responding to {{ comment.parent_name }} </a></div> 
+   		<div class="child-comment"><a href="#{{ comment.parent_id }}" style="color:green;cursor:pointer;" parent_id="{{ comment.parent_id }}" title="Responding to {{ comment.parent_name }}"><i class="icon icon-reply" aria-hidden="true" ></i> Responding to {{ comment.parent_name }} </a></div> 
     {% endif %}
     
     {% comment %}
     <!-- Censor offensive words, except for a few whitelisted words. -->
     {% endcomment %}
     
+    <span class="comment-message">
     {{ comment.message | markdownify | whitelist | censor}}
+    </span>
     
     {% if comment.depth < '1' %}
     <div class="append-reply-form" id="reply-to-{{ comment._id }}">
-    <div class="comment-reply">
+    <div class="reply-to-comment">
     
     {% comment %}
     <!-- Move the comment box up if you click on "reply." Move it back down if you click "close." -->
@@ -103,7 +102,7 @@
   <!-- Add a comment submit box -->
   {% endcomment %}
   
-  <div id="comment-submission-form">
+  <div class="submit-comment" id="comment-submission-form">
   {% include submit_comment.html %}
   </div>
 {% endif %}
