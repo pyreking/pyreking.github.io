@@ -8,7 +8,6 @@ layout: compress
   {% include head.html %}
   <!-- Load the external stylsheet for searching -->
   <link rel="stylesheet" href="/../../../css/super-search.css">
-  <link rel="stylesheet" href="/../../../css/icomoon.css">
   <body>
     <div class="container content">
       <header class="masthead">
@@ -20,31 +19,29 @@ layout: compress
 	<!-- Archive link -->
 		&nbsp;&nbsp;&nbsp;
 		<a href="/archive/" title="Look at my old posts">
-		<small><i class="icon icon-archive" aria-hidden="true"></i></small></a>
+		<small><svg class="icon-archive"><use xlink:href="/images/icons/symbol-defs.svg#icon-archive"></use></svg></small></a>
           
 	<!-- Atom feed -->
 		&nbsp;&nbsp;&nbsp;
 		<a href="/atom.xml" title="Subscribe to my Atom feed">
-		<small><i class="icon icon-rss" aria-hidden="true"></i></small></a>
+		<svg class="icon-feed"><use xlink:href="/images/icons/symbol-defs.svg#icon-feed"></use></svg></a>
 	
 	<!-- Click on the search icon to search -->
 	&nbsp;&nbsp;&nbsp;
 	<a href="javascript:void(0)" title="Search the website (press '/' to bring this up)" onclick="toggleSearch()" class="search-btn">
-	<small><i class="icon icon-search" aria-hidden="true"></i></small></a>
+	<svg class="icon-search"><use xlink:href="/images/icons/symbol-defs.svg#icon-search"></use></svg></a>
 	
 	<!-- Newsletter -->
 	&nbsp;&nbsp;&nbsp;
 	<a href="/newsletter/" title="Subscribe to my newsletter">
-	<small><i class="icon icon-newspaper-o" aria-hidden="true"></i></small></a>
+	<svg class="icon-newspaper"><use xlink:href="/images/icons/symbol-defs.svg#icon-newspaper"></use></svg></a>
 	
 	<!-- Press / to search -->
 	 <div class="super-search" id="js-super-search">
   <a href="javascript:void(0)" onclick="superSearch.toggle()" class="super-search__close-btn">
   
-  <!-- X icon for search -->
-  <svg style="width:48px;height:48px" viewBox="0 0 24 24">
-<path d="M13.46,12L19,17.54V19H17.54L12,13.46L6.46,19H5V17.54L10.54,12L5,6.46V5H6.46L12,10.54L17.54,5H19V6.46L13.46,12Z" />
-</svg></a>
+  <!-- Close icon for search -->
+<svg class="icon-close-search" style="height:48px;width:48px;"><use xlink:href="/images/icons/symbol-defs.svg#icon-close-search"></use></svg></a>
 
 <!-- Text field for search -->
   <input type="text" placeholder="Type here to search" class="super-search__input" id="js-super-search__input">
@@ -63,6 +60,9 @@ layout: compress
 	<!-- Main content -->
       <main> {{ content }} </main>
 	<br>
+	
+	
+	<div class="wrap-footer">
 	<!-- Copyright Disclaimer -->
       <footer class="footer">
       <small>
@@ -76,6 +76,7 @@ layout: compress
         </small>
 	</center>
       </footer>
+      </div>
     </div>
   </body>
 </html>

@@ -10,7 +10,7 @@ layout: default
 <span class="post-tags">
   {% if page.tags.size > 0 %}
     <a class="tag-style" href="{{ site.url }}/tags/" title="tags">
-    <i class="icon icon-tags" aria-hidden="true"></i></a>
+    <svg class="icon-tags" style="vertical-align: -4px;"><use xlink:href="/images/icons/symbol-defs.svg#icon-tags"></use></svg></a>
     {% include get_tags.html tags=page.tags %}
     {% endif %}
 </span>
