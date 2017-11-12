@@ -4,8 +4,8 @@ permalink:           pretty
 # Setup
 title:               Austin Guiney
 tagline:             "Inside the mind of Austin Guiney!"
-paginate:            10
 baseurl:             ""
+paginate:            10
 
 exclude: [Rakefile, _posts/LICENSE.md, _data/comments/LICENSE.md]
 
@@ -31,10 +31,10 @@ author:
 
 # Gems
 plugins:
-  - jekyll-paginate
   - jekyll-gist
   - jekyll-archives
   - jekyll-sitemap
+  - jekyll-paginate
   
 # Post preview
 excerpt_separator: <!--more-->
