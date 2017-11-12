@@ -50,7 +50,7 @@
 
 // Blue cloud for post tags
 .tag-style {
-   background: #0080FF;
+   background: #58ACFA;
    padding: .1rem .5rem;
    border-radius: 35px;
    font-size: 90%;
@@ -69,7 +69,7 @@
   display: block;
   padding-bottom: 1.10rem;
   margin-bottom: 1rem;
-  border-bottom: 2px solid #cfcfcf;
+  border-bottom: 2px dashed #cfcfcf;
 }
 
 // Styling for author image
@@ -102,14 +102,6 @@
   margin-bottom: 0.4rem;
   margin-top: -0.65rem;
   color: #848484;
-}
-
-// Flip the fa-reply icon over to the right
-i.icon-reply {
-  -webkit-transform:rotateY(180deg);
-  -moz-transform:rotateY(180deg);
-  -o-transform:rotateY(180deg);
-  -ms-transform:rotateY(180deg);
 }
 
 // Related to comments
@@ -149,16 +141,11 @@ i.icon-reply {
   padding-top: -.7rem;
 }
 
-// No new line for a star
-i.icon-star {
-  display: inline;
-}
-
 // Related posts
 .related {
   margin: 0;
-  border-top: 2px solid #cfcfcf;
-  border-bottom: 2px solid #cfcfcf;
+  border-top: 2px dashed #cfcfcf;
+  border-bottom: 2px dashed #cfcfcf;
   margin-top: -0.4rem;
 }
 

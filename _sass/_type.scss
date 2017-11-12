@@ -46,7 +46,6 @@ h4.important-comment-author {
   margin-top: 0.65rem;
   font-size: 1rem;
   margin-bottom: 0rem;
-  color: #B40431;
 }
 
 a.normal {
@@ -150,4 +149,16 @@ a[href^="#fnref:"] {
 .important {
   font-size: 1.25rem;
   font-weight: 300;
+}
+
+svg {
+  display: inline-block;
+  background-color: transparent;
+  fill: currentColor;
+  width: 20px;
+  height: 20px;
+  
+  a:hover {
+    text-decoration: underline;
+  }
 }
