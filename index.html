@@ -15,7 +15,13 @@ title: Home
 {% assign num_comments = site.data.comments[post.slug].size %}
 
 {% if num_comments >= 1 %}
-<div class="pagination-comments"><a class="normal" href="{{ post.url | absolute_url }}#comments"><i class="icon icon-comments-o" title="Comments"></i>&nbsp;{{ num_comments }}</a></div>
+<div class="pagination-comments"><a class="normal" href="{{ post.url | absolute_url }}#comments"><svg class="icon-comments"><use xlink:href="/images/icons/symbol-defs.svg#icon-comments"></use></svg> {{ num_comments }}
+{% if num_comments == 1 %}
+Comment
+{% else %}
+Comments
+{% endif %}
+</a></div>
 {% endif %}
 {{ post.excerpt }}
 </article>
@@ -23,16 +29,22 @@ title: Home
 
 <!-- pagination -->
 {% if paginator.total_pages > 1 %}
-<div class="pagination"> 
+<div class="pagination">
+  
+  {% if paginator.page > 2 %}
+  <a href="/">First</a>
+  {% endif %}
   {% if paginator.previous_page %}
     <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">Prev</a>
-  {% else %}
-    <span>Prev</span>
   {% endif %}
+  
+  {% capture start %}
+  {{ paginator.page | minus: 4 }}
+  {% endcapture %}
 
-  {% for page in (1..paginator.total_pages) %}
+  {% for page in (1..paginator.total_pages) limit: 6 offset: start %}
     {% if page == paginator.page %}
-      <span>{{ page }}</span>
+      <span style="background-color:#f1f1f1;">{{ page }}</span>
     {% elsif page == 1 %}
       <a href="/">{{ page }}</a>
     {% else %}
@@ -42,10 +54,12 @@ title: Home
 
   {% if paginator.next_page %}
     <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next</a>
-  {% else %}
-    <span>Next</span>
   {% endif %}
+  
+  {% if paginator.page != paginator.total_pages %}
+   <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', paginator.total_pages }}">Last</a>
+  {% endif %}
+  
 </div>
-
 </div>
 {% endif %}
