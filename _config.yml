@@ -7,7 +7,7 @@ tagline:             "Inside the mind of Austin Guiney!"
 baseurl:             ""
 paginate:            10
 
-exclude: [Rakefile, _posts/LICENSE.md, _data/comments/LICENSE.md]
+exclude: [Rakefile, _posts/LICENSE.md, _data/comments/LICENSE.md, LICENSE.md, CONTRIBUTORS.md, staticman.yml, TODO.txt, README.md]
 
 # Name of repository, for use with Staticman
 repository: "pyreking/pyreking.github.io"
