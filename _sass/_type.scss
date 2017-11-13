@@ -25,9 +25,23 @@ h2.privacy {
   margin-top: 1rem;
 }
 
+h2.about-author {
+  margin-top: -0.1rem;
+  font-size: 1.5rem;
+}
+
 h3 {
   margin-top: 1.5rem;
   font-size: 1.25rem;
+}
+
+h3.about-author-heading {
+  margin-top: 0.85rem;
+  font-size: 1.25rem;
+}
+
+h3.comments {
+  margin-top: 0.8rem;
 }
 
 h4, h5, h6 {
@@ -36,13 +50,6 @@ h4, h5, h6 {
 }
 
 h4.comment-author {
-  margin-top: 0.65rem;
-  font-size: 1rem;
-  margin-bottom: 0rem;
-}
-
-h4.important-comment-author {
-  display: inline-block;
   margin-top: 0.65rem;
   font-size: 1rem;
   margin-bottom: 0rem;
@@ -75,11 +82,13 @@ dd {
 }
 
 hr {
-  position: relative;
-  margin: 1.5rem 0;
-  border: 0;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #fff;
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
 }
 
 abbr {
