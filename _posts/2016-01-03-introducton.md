@@ -2,7 +2,7 @@
 layout: post
 title: Introduction
 author: aguiney
-tags: jekyll
+tags: jekyll example
 comments: true
 ---
 

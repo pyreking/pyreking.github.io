@@ -1,7 +1,7 @@
 ---
 layout: post
 title: What's Jekyll?
-tags: jekyll
+tags: jekyll example
 comments: true
 debugger: true
 author: aguiney
