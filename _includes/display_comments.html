@@ -25,11 +25,10 @@
     <h3>
     <svg class="icon-comments"><use xlink:href="/images/icons/symbol-defs.svg#icon-comments"></use></svg>
     {% if comments.size == 1 %}
-    1 Comment
+    <span>1 Comment</span>
     {% else %}
-    {{ comments | size }} Comments
-    {% endif %}
-  </h3>
+    <span>{{ comments | size }} Comments</span>
+    {% endif %}</h3>
     </div>
     {% endif %}
     
@@ -41,30 +40,8 @@
    
    {% assign post_author = site.data.authors[page.author] %}
    
-   {% comment %}
-<!-- The admin's name has an orange star. -->
-   {% endcomment %}
-   
-   {% if comment.name == site.author.name %}
-   <legend><h4 class="important-comment-author" id="{{ comment._id }}">{{ comment.name }}</h4> <svg class="icon-star" style="color:#FF8000"><use xlink:href="/images/icons/symbol-defs.svg#icon-star"></use></svg>
-</legend>
-
-    {% comment %}
-<!-- The author's name has a purple star. -->
-    {% endcomment %}
-
-   {% elsif comment.name == post_author.name %}
-    <legend><h4 class="important-comment-author" id="{{ comment._id }}">{{ comment.name }}</h4> <svg class="icon-star" style="color:#7401DF"><use xlink:href="/images/icons/symbol-defs.svg#icon-star"></use></svg>
-</legend>
-
-   {% comment %}
-<!-- Normal names have no star. -->
-  {% endcomment %}
-
-	{% else %}
-	<legend><h4 class="comment-author" id="{{ comment._id }}">{{ comment.name }}</h4></legend>
-   {% endif %}
-     
+	<legend><h4 class="comment-author" id="{{ comment._id }}">
+	<a class="normal" href="#{{ comment._id }}">{{ comment.name }}</a></h4></legend>
     <legend>
     <span class="smaller">
     <time datetime="{{ comment.date | date_to_xmlschema }}" class="comment-date">{{ comment.date | ordinal }}</time>
@@ -76,7 +53,7 @@
     {% endcomment %}
     
     {% if comment.depth >= '1' %}
-   		<div class="child-comment"><a href="#{{ comment.parent_id }}" style="color:green;cursor:pointer;" parent_id="{{ comment.parent_id }}" title="Responding to {{ comment.parent_name }}"><svg class="icon-angle-double-right" style="vertical-align: -3px;"><use xlink:href="/images/icons/symbol-defs.svg#icon-angle-double-right"></use></svg> Responding to {{ comment.parent_name }} </a></div> 
+   		<div class="child-comment"><a href="#{{ comment.parent_id }}" style="color:green;cursor:pointer;text-decoration:none;" parent_id="{{ comment.parent_id }}" title="Responding to {{ comment.parent_name }}"><svg class="icon-angle-double-right" style="vertical-align: -3px;"><use xlink:href="/images/icons/symbol-defs.svg#icon-angle-double-right"></use></svg>Responding to {{ comment.parent_name }} </a></div> 
     {% endif %}
     
     {% comment %}
@@ -95,12 +72,12 @@
     <!-- Move the comment box up if you click on "reply." Move it back down if you click "close." -->
     {% endcomment %}
     
-    <a href="javascript:void(0);" style="cursor:pointer;" title="Reply to {{ comment.name }}" onclick="reply('{{ comment._id }}')">
+    <a href="javascript:void(0);" style="cursor:pointer;text-decoration:none;" title="Reply to {{ comment.name }}" onclick="reply('{{ comment._id }}')">
     <svg class="icon-reply"><use xlink:href="/images/icons/symbol-defs.svg#icon-reply"></use></svg>&nbsp;Reply to {{ comment.name }}</a>
     </div>
     <div class="close-reply">
-    <a href="javascript:void(0);" style="cursor:pointer;" onclick="closeReply();" title="Close reply">
-    <svg class="icon-close"><use xlink:href="/images/icons/symbol-defs.svg#icon-close"></use></svg>&nbsp;&nbsp;Close</a>
+    <a href="javascript:void(0);" style="cursor:pointer;text-decoration:none;" onclick="closeReply();" title="Close reply">
+    <svg class="icon-close" style="vertical-align: -2px;"><use xlink:href="/images/icons/symbol-defs.svg#icon-close"></use></svg>&nbsp;Close</a>
     </div>
     </div>
     {% endif %}
@@ -109,7 +86,7 @@
   {% comment %}
   <!-- Add a comment submit box -->
   {% endcomment %}
-  
+  <hr>
   <div class="submit-comment" id="comment-submission-form">
   {% include submit_comment.html %}
   </div>
