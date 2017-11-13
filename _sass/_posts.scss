@@ -3,6 +3,75 @@
 // Each post is wrapped in `.post` and is used on default and post layouts. Each
 // page is wrapped in `.page` and is only used on the page layout.
 
+// Styling for about author section
+.author-info {
+  display: block;
+}
+
+// Styling for author image
+.author-pic { 
+  display: block;
+  float: left;
+  border: 1px solid black;
+  max-width: 70px;
+  max-height: 70px;
+  width: auto;
+  height: auto;
+  margin: 0px 10px -10px 1px;
+}
+
+.child-comment {
+  display: block;
+  font-size: smaller;
+  margin-bottom: 0.2rem;
+  font-weight: bolder;
+  color: #6E6E6E;
+}
+
+.clear {
+  clear: both;
+}
+
+.close-reply {
+  font-size: smaller;
+  color: #6E6E6E;
+  font-weight: bolder;
+  display: none;
+}
+
+#comments {
+  margin-top: -0.8rem;
+}
+
+.comment-date {
+  display: inline-block;
+  margin-top: -.5rem;
+}
+
+.comment-message {
+  display: block;
+}
+
+#government-contact-info {
+  display: none;
+}
+
+.help-table {
+  margin-top: 0;
+  display: none;
+  margin-bottom: 7px;
+}
+
+.important {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+// Hide bullets for unordered lists
+.no-bullets {
+  list-style-type: none;
+}
+
 .page,
 .post {
   margin-bottom: 1.5rem;
@@ -18,9 +87,22 @@
 .post-title a {
   color: #303030;
 }
+
 .page-title,
 .post-title {
   margin-top: 0;
+}
+
+.pagination-comments {
+  margin-bottom: 0.4rem;
+  margin-top: -0.65rem;
+  color: #848484;
+}
+
+.post-author {
+  display: block;
+  margin-top: -.5rem;
+  margin-bottom: 0.6rem;
 }
 
 .post-date {
@@ -30,17 +112,6 @@
   color: #848484;
 }
 
-.important {
-  font-size: 1.25rem;
-  font-weight: 300;
-}
-
-.post-author {
-  display: block;
-  margin-top: -.5rem;
-  margin-bottom: 0.6rem;
-}
-
 // Post tags
 .post-tags {
   display: block;
@@ -48,115 +119,10 @@
   margin-bottom: 1rem;
 }
 
-// Blue cloud for post tags
-.tag-style {
-   background: #58ACFA;
-   padding: .1rem .5rem;
-   border-radius: 35px;
-   font-size: 90%;
-   color: white;
-}
-
-// Change color when hovering
-.tag-style:hover{
-   text-decoration:none;
-   background:#848484;
-   color:#fff
-}
-
-// Styling for about author section
-.author-info {
-  display: block;
-  padding-bottom: 1.10rem;
-  margin-bottom: 1rem;
-  border-bottom: 2px dashed #cfcfcf;
-}
-
-// Styling for author image
-.author-pic { 
-  display: block;
-  float: left;
-  border: 1px solid black;
-  max-width: 70px;
-  max-height: 70px;
-  width: auto;
-  height: auto;
-  margin: 0px 10px -10px 1px;
-}
-
-.clear {
-  clear: both;
-}
-
-// Hide bullets for unordered lists
-.no-bullets {
-  list-style-type: none;
-}
-
-// Small text
-.smaller {
-  font-size: smaller;
-}
-
-.pagination-comments {
-  margin-bottom: 0.4rem;
-  margin-top: -0.65rem;
-  color: #848484;
-}
-
-// Related to comments
-
-.comment-date {
-  display: inline-block;
-  margin-top: -.5rem;
-}
-
-.comment-message {
-  display: block;
-}
-
-.reply-to-comment {
-  padding-top: 0.2rem;
-  font-size: smaller;
-  color: #6E6E6E;
-  font-weight: bolder;
-}
-
-.child-comment {
-  display: block;
-  font-size: smaller;
-  margin-bottom: 0.2rem;
-  font-weight: bolder;
-  color: #6E6E6E;
-}
-
-.close-reply {
-  font-size: smaller;
-  color: #6E6E6E;
-  font-weight: bolder;
-  display: none;
-}
-
-.submit-comment {
-  padding-top: -.7rem;
-}
-
 // Related posts
 .related {
   margin: 0;
-  border-top: 2px dashed #cfcfcf;
-  border-bottom: 2px dashed #cfcfcf;
-  margin-top: -0.4rem;
-}
-
-.help-table {
-  margin-top: 0;
-  display: none;
-  margin-bottom: 7px;
-}
-
-#government-contact-info {
-  display: none;
+  margin-top: -0.6rem;
 }
 
 .related-posts {
@@ -183,4 +149,36 @@
       }
     }
   }
+}
+
+.reply-to-comment {
+  padding-top: 0.2rem;
+  font-size: smaller;
+  color: #6E6E6E;
+  font-weight: bolder;
+}
+
+// Small text
+.smaller {
+  font-size: smaller;
+}
+
+.submit-comment {
+  padding-top: -7rem;
+}
+
+// Blue cloud for post tags
+.tag-style {
+   background: #58ACFA;
+   padding: .1rem .5rem;
+   border-radius: 35px;
+   font-size: 90%;
+   color: white;
+}
+
+// Change color when hovering
+.tag-style:hover{
+   text-decoration:none;
+   background:#848484;
+   color:#fff
 }
