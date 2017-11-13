@@ -7,8 +7,8 @@
 <!-- Publish the author's name -->
 {% if author %}
 <aside class="author-info">
-<h2>About the Author</h2>
-<h3>{{ author.name }}</h3>
+<h2 class="about-author">About the Author</h2>
+<h3 class="about-author-heading">{{ author.name }}</h3>
 
 <!-- Small picture of the author -->
 {% if author.picture %}
@@ -39,13 +39,13 @@
 <!-- Twitter account -->
 {% if author.twitter %}
 <a href="https://www.twitter.com/{{author.twitter}}">
-<svg class="icon icon-twitter"><use xlink:href="/images/icons/symbol-defs.svg#icon-twitter"></use></svg></a>
+<svg class="icon-twitter"><use xlink:href="/images/icons/symbol-defs.svg#icon-twitter"></use></svg></a>
 {% endif %}
 
 <!-- Facebook account -->
 {% if author.facebook %}
 <a href="https://www.facebook.com/{{author.facebook}}">
-<svg class="icon icon-facebook"><use xlink:href="/images/icons/symbol-defs.svg#icon-facebook"></use></svg></a>
+<svg class="icon-facebook-square"><use xlink:href="/images/icons/symbol-defs.svg#icon-facebook-square"></use></svg></a>
 {% endif %}
 
 <!-- YouTube account -->
@@ -67,4 +67,9 @@
 {% endif %}
 </div>
 </aside>
+
+{% if author != nil %}
+<hr>
+{% endif %}
+
 {% endif %}
