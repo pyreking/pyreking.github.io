@@ -1,14 +1,14 @@
 # Author details.
 aguiney:
     name: Austin Guiney
-    bio: "Austin writes about an assortment of different topics, including sports, politics, and popular culture. He also codes as a hobby."
+    bio: "Austin is an author, and computer programmer. His many passions include politics, sports, and narrative analysis."
     website: http://austinguiney.com
     email: austin.guiney@gmail.com
     twitter: SenorKoffey
     youtube: N00biePwner
     instagram: aguiney
     github: PyreKing
-    picture: "/../../../images/austin_bio_pic.jpg"
+    picture: "/assets/img/austin_bio_pic.jpg"
     
 hguiney:
     name: Hugh Guiney
