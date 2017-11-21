@@ -9,8 +9,8 @@ layout: default
 <!-- Tags -->
 <span class="post-tags">
   {% if page.tags.size > 0 %}
-    <a class="tag-style" href="{{ site.url }}/tags/" title="tags">
-    <svg class="icon-tags" style="vertical-align: -4px;"><use xlink:href="/images/icons/symbol-defs.svg#icon-tags"></use></svg></a>
+    <a class="tag-style" href="{{ site.baseurl }}/tags/" title="tags">
+    <svg class="icon-tags" style="vertical-align: -4px;"><use xlink:href="/assets/img/svg/sprite.defs.svg#svg--tags"></use></svg></a>
     {% include get_tags.html tags=page.tags %}
     {% endif %}
 </span>
@@ -54,3 +54,4 @@ layout: default
 {% else %}
 <p class="important" style="padding-top: 1rem;">Comments have been disabled for this post.</p>
 {% endif %}
+</article>
