@@ -5,11 +5,11 @@ function reply(id) {
 	document.getElementById("parent_id").value = id;
 	document.getElementById("parent_name").value = document.getElementById(id).innerHTML;
 	document.getElementById("depth").value++;
-	document.getElementById("form-title").innerText = "Reply to " + document.getElementById(id).innerHTML;
+	document.getElementById("form-title").innerText = "Reply to " + document.getElementById(id).children[0].innerHTML;
 	var commentForm = document.getElementById("comment-form");
 	var replyID = document.getElementById("reply-to-" + id)
 	replyID.append(commentForm);
-	$(replyID.children[1]).show();
+	replyID.children[1].style.display = 'block';
 }
 
 function closeReply() {
@@ -20,5 +20,5 @@ function closeReply() {
 	var commentForm = document.getElementById("comment-form");
 	var endOfDocument = document.getElementById("comment-submission-form");
 	endOfDocument.append(commentForm);
-	$(".close-reply").hide();
+	document.getElementsByClassName("close-reply")[0].style.display = 'none';
 }
