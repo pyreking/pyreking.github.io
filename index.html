@@ -3,9 +3,9 @@ layout: default
 title: Home
 ---
 <div class="posts">
-<article class="post">
-
 {% for post in paginator.posts %}
+
+<article class="post">
 <h1 class="post-title">
 <a href="{{post.url | prepend: site.baseurl}}">
 {{ post.title }}</a></h1>
@@ -15,7 +15,7 @@ title: Home
 {% assign num_comments = site.data.comments[post.slug].size %}
 
 {% if num_comments >= 1 %}
-<div class="pagination-comments"><a class="normal" href="{{ post.url | absolute_url }}#comments"><svg class="icon-comments"><use xlink:href="/images/icons/symbol-defs.svg#icon-comments"></use></svg> {{ num_comments }}
+<div class="pagination-comments"><a class="normal" href="{{ post.url | absolute_url }}#comments"><svg class="icon-comments"><use xlink:href="/assets/img/svg/sprite.defs.svg#svg--comment-o"></use></svg> {{ num_comments }}
 {% if num_comments == 1 %}
 Comment
 {% else %}
@@ -61,5 +61,5 @@ Comments
   {% endif %}
   
 </div>
-</div>
 {% endif %}
+</div>
