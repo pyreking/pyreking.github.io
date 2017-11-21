@@ -1,0 +1,22 @@
+---
+layout: default
+title: Posts by year
+permalink: /archive/year/
+---
+<h1>{{page.title}}</h1>
+
+{% assign previous_year = nil %}
+
+{% for post in site.posts %}
+
+{% assign post_year = post.date | date: "%Y" %}
+
+{% if previous_year == nil or previous_year != post_year %}
+<h2>
+<a href="{{ site.url }}/{{ post_year }}">{{ post_year }}</a>
+</h2>
+
+{% assign previous_year = post_year %}
+
+{% endif %}
+{% endfor %}
