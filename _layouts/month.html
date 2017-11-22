@@ -1,12 +1,12 @@
-<!-- Copyright (c) 2014 Alfred Xing. -->
-<!-- Modifications (c) 2017 Austin Guiney.
-<!-- MIT Licensed. -->
-
 ---
 layout: default
 ---
 
-<h1>Archive of posts from {{ page.date | date: "%B %Y" }}</h1>
+<!-- Copyright (c) 2014 Alfred Xing. -->
+<!-- Modifications (c) 2017 Austin Guiney.
+<!-- MIT Licensed. -->
+
+<h1>Posts from {{ page.date | date: "%B %Y" }}</h1>
 
 <ul class="posts">
 
@@ -20,16 +20,16 @@ layout: default
 {% assign prev_post = forloop.index0 | minus: 1 %}
 
 <!-- Get the date for the previous post -->
-{% assign prev_date = sorted[prev_post].date | month_ordinal %}
+{% assign prev_date = sorted[prev_post].date %}
 
 <!-- Get the date for the current post -->
-{% assign curr_date = post.date | month_ordinal %}
+{% assign curr_date = post.date %}
 
 <!-- Create a new header if the current and previous dates are different -->
 {% if prev_date != curr_date %}
 
 <h2>
-<span>{{ post.date | month_ordinal }}</span>
+<span>{{ post.date }}</span>
 </h2>
 {% endif %}
 
