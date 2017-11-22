@@ -6,9 +6,6 @@
 <!-- MIT Licensed -->
 {% endcomment %}
 
-<script src="/../../../js/reply-to-comment.js"></script>
-<script src="/../../../js/jquery-3.2.1.slim.min.js"></script>
-
 {% comment %}
 <!-- Get all of the comments, and sort them by reverse chronological order. Child comments are directly below parent comments. -->
 {% endcomment %}
@@ -23,7 +20,7 @@
     {% if comments.size >= 1 %}
     <div id="comments">
     <h3>
-    <svg class="icon-comments"><use xlink:href="/images/icons/symbol-defs.svg#icon-comments"></use></svg>
+    <svg class="icon-comments"><use xlink:href="/assets/img/svg/sprite.defs.svg#svg--comment-o"></use></svg>
     {% if comments.size == 1 %}
     <span>1 Comment</span>
     {% else %}
@@ -52,17 +49,19 @@
     <!-- The maximum reply depth is 1. Add a link to the parent comment. -->
     {% endcomment %}
     
+    <script src="/assets/js/main.js" async></script>
+    
     {% if comment.depth >= '1' %}
-   		<div class="child-comment"><a href="#{{ comment.parent_id }}" style="color:green;cursor:pointer;text-decoration:none;" parent_id="{{ comment.parent_id }}" title="Responding to {{ comment.parent_name }}"><svg class="icon-angle-double-right" style="vertical-align: -3px;"><use xlink:href="/images/icons/symbol-defs.svg#icon-angle-double-right"></use></svg>Responding to {{ comment.parent_name }} </a></div> 
+   		<div class="child-comment"><a href="#{{ comment.parent_id }}" style="color:green;cursor:pointer;text-decoration:none;" parent_id="{{ comment.parent_id }}" title="Responding to {{ comment.parent_name }}"><svg class="icon-angle-double-right" style="vertical-align: -3px;"><use xlink:href="/assets/img/svg/sprite.defs.svg#svg--angle-double-right"></use></svg>Responding to {{ comment.parent_name }} </a></div> 
     {% endif %}
     
     {% comment %}
     <!-- Censor offensive words, except for a few whitelisted words. -->
     {% endcomment %}
     
-    <span class="comment-message">
+    <p class="comment-message">
     {{ comment.message | markdownify | whitelist | censor}}
-    </span>
+    </p>
     
     {% if comment.depth < '1' %}
     <div class="append-reply-form" id="reply-to-{{ comment._id }}">
@@ -73,11 +72,11 @@
     {% endcomment %}
     
     <a href="javascript:void(0);" style="cursor:pointer;text-decoration:none;" title="Reply to {{ comment.name }}" onclick="reply('{{ comment._id }}')">
-    <svg class="icon-reply"><use xlink:href="/images/icons/symbol-defs.svg#icon-reply"></use></svg>&nbsp;Reply to {{ comment.name }}</a>
+    <svg class="icon-reply" style="vertical-align: -2px;"><use xlink:href="/assets/img/svg/sprite.defs.svg#svg--reply"></use></svg>&nbsp;Reply to {{ comment.name }}</a>
     </div>
     <div class="close-reply">
     <a href="javascript:void(0);" style="cursor:pointer;text-decoration:none;" onclick="closeReply();" title="Close reply">
-    <svg class="icon-close" style="vertical-align: -2px;"><use xlink:href="/images/icons/symbol-defs.svg#icon-close"></use></svg>&nbsp;Close</a>
+    <svg class="icon-close" style="vertical-align: -2px;"><use xlink:href="/assets/img/svg/sprite.defs.svg#svg--close"></use></svg>&nbsp;Close</a>
     </div>
     </div>
     {% endif %}
