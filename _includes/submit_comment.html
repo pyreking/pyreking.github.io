@@ -2,10 +2,6 @@
 <!-- Copyright (c) Austin Guiney 2017. -->
 <!-- MIT Licensed -->
 
-<link rel="stylesheet" href="/../../../css/switch.css">
-<script src="/../../../js/toggle-table.js"></script>
-<script src="/../../../js/jquery-3.2.1.slim.min.js"></script>
-
 {% unless page.comments_locked == true %}
 <!-- Comment form -->
 <div id="comment-form">
@@ -23,7 +19,7 @@
   <input type="hidden" id="depth" name="fields[depth]" value="0">
   
   <h4 id="government-contact-info">If you work for the government, 
-  please give me your name and address.</h4></legend>
+  please give me your name and address.</h4>
   <input type="text" id="government-contact-info" name="fields[address]" autocomplete="off"/>
   
   <div>
@@ -41,12 +37,10 @@
     {% include formatting_help.html %}
     
     <!-- Message box -->
-    <textarea style="width:100%;resize:none;" name="fields[message]" rows="12" minlength="9" maxlength="900" required"></textarea>
+    <textarea style="width:100%;resize:none;" name="fields[message]" rows="12" minlength="9" maxlength="900" required onKeyDown="textCounter(this,'remaining',900);" onKeyUp="textCounter(this,'remaining',900)" ></textarea>
   </div>
 
 <span id="remaining">900</span> characters remaining
-
-<script src="/../../../js/character-count.js"></script>
   
   <div>
     <legend>Comments will appear after moderation.</legend>
