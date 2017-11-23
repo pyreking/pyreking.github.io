@@ -5,6 +5,7 @@ _site
 .sass-cache
 gulpfile.js
 yarn.lock
+TODO.txt
 
 # Numerous always-ignore extensions
 *.diff
