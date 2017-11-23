@@ -1,5 +1,6 @@
 /* Copyright (c) 2012 Mark Otto.
- * Modifications (c) 2017 Austin Guiney.
+ * Some modifications Copyright (c) 2015 Zhihao Li.
+ * Other modifications (c) 2017 Austin Guiney.
  * MIT Licensed. */
 
 // Posts and pages
@@ -173,7 +174,11 @@
   padding-top: -7rem;
 }
 
-// Blue cloud for post tags
+/* Blue cloud for post tags
+ * Copyright (c) 2015 Zhihao Li.
+ * Modifications Copyright (c) 2017 Austin Guiney.  
+ * MIT Licensed. */
+ 
 .tag-style {
    background: #58ACFA;
    padding: .1rem .5rem;
