@@ -4,6 +4,7 @@ _site
 .ruby-version
 .sass-cache
 gulpfile.js
+yarn.lock
 
 # Numerous always-ignore extensions
 *.diff
