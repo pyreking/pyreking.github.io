@@ -1,3 +1,6 @@
+# Copyright (c) 2017 Austin Guiney
+# MIT Licensed
+
 require 'sanitize'
 require 'obscenity'
 
