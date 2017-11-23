@@ -1,7 +1,10 @@
 # Orginal work Copyright (c) 2012 by Mark Otto.
 # Modified work Copyright (c) 2017 by Austin Guiney, and other open source contributors.
 
+Alex Gil.  
 Alfred Xing.  
+Anatol Broder.  
+Andreas Faerber.  
 Austin Guiney.  
 Christopher Orr.  
 Christian Specht.  
@@ -10,8 +13,10 @@ Dave Gandy.
 Dan Leech.  
 Eduardo Bouças.  
 hjpotter92.  
+Joshua Cox.  
 Keyamoon.  
 Kushagra Gour.  
+Lawrence Woodman.  
 MailChimp.  
 Mark Otto.  
 Matthew Morris.  
