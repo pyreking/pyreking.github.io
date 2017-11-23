@@ -1,6 +1,9 @@
 ---
 layout: null
 ---
+<!-- Copyright (c) 2012 Mark Otto. -->
+<!-- Modifications (c) 2017 Austin Guiney. -->
+<!-- MIT Licensed. -->
 
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
