@@ -9,7 +9,9 @@ paginate:            10
 
 exclude: [Rakefile, 
           _posts/LICENSE.md,
-          _data/comments/LICENSE.md, 
+          _data/comments/LICENSE.md,
+          _assets/img/IMAGE_LICENSE.md,
+          _assets/img/svg/licenses/,
           LICENSE.md, 
           CONTRIBUTORS.md, 
           staticman.yml, 
