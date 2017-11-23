@@ -3,6 +3,7 @@ _gh_pages
 _site
 .ruby-version
 .sass-cache
+gulpfile.js
 
 # Numerous always-ignore extensions
 *.diff
@@ -41,3 +42,4 @@ validation-report.json
 # Folders to ignore
 node_modules
 assets
+_assets/gulp_config/
