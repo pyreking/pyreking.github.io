@@ -46,7 +46,7 @@ comments:
   moderation: true
 
   # Name of the site. Used in notification emails.
-  name: "pyreking.github.io"
+  name: "austinguiney.com"
 
   # Notification settings. When enabled, users can choose to receive notifications
   # via email when someone adds a reply or a new comment. This requires an account
