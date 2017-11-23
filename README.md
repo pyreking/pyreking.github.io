@@ -1,10 +1,11 @@
-# Introduction
+# About
 
 This is the repository for my personal website, austinguiney.com.
 
-# License
+# Licensing
 
 This software is released under the MIT License.  
-Poole theme Copyright (c) 2012 by Mark Otto. See CONTRIBUTORS.md for a full list of contributors.  
-Comments are Copyright (c) 2017 by each individual author. All rights reserved.  
-All other non-software components are Copyright (c) 2017 by Austin Guiney. All rights reserved.  
+Poole theme Copyright (c) 2012 Mark Otto. See CONTRIBUTORS.md for a full list of contributors.  
+SVG icons Copyright (c) Dan Leech, Dave Gandy, Keyamoon <http://keyamoon.com/>, Kushagra Gour, and Simple Icons contributors. See the _assets/img/svg/licenses directory for more details.
+Comments are Copyright (c) each individual author. All rights reserved.  
+All other written content is Copyright (c) Austin Guiney. All rights reserved.  
