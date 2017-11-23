@@ -48,6 +48,10 @@
   margin-top: -0.8rem;
 }
 
+.comment-form {
+  padding-top: -7rem;
+}
+
 .comment-date {
   display: inline-block;
   margin-top: -.5rem;
@@ -171,7 +175,22 @@
 }
 
 .submit-comment {
-  padding-top: -7rem;
+  background-color: #7401DF;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  padding: 12px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.submit-comment:hover {
+  background-color: #666666;
 }
 
 /* Blue cloud for post tags
