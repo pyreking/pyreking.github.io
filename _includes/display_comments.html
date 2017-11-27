@@ -53,7 +53,7 @@
     <script src="/assets/js/main.js" async></script>
     
     {% if comment.depth >= '1' %}
-   		<div class="child-comment"><a href="#{{ comment.parent_id }}" style="color:green;cursor:pointer;text-decoration:none;" parent_id="{{ comment.parent_id }}" title="Responding to {{ comment.parent_name }}"><svg class="icon-angle-double-right" style="vertical-align: -3px;"><use xlink:href="/assets/img/svg/sprite.defs.svg#svg--angle-double-right"></use></svg>Responding to {{ comment.parent_name }} </a></div> 
+   		<div class="child-comment"><a href="#{{ comment.parent_id }}" style="cursor:pointer;text-decoration:none;" parent_id="{{ comment.parent_id }}" title="Responding to {{ comment.parent_name }}"><svg class="icon-angle-double-right" style="vertical-align: -3px;"><use xlink:href="/assets/img/svg/sprite.defs.svg#svg--angle-double-right"></use></svg>Responding to {{ comment.parent_name }} </a></div> 
     {% endif %}
     
     {% comment %}
