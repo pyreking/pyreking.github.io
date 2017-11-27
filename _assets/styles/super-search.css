@@ -67,13 +67,25 @@ MIT Licensed
 	padding: 17px;
 	margin: 12px 14px;
 	box-shadow: 0 3px 4px rgba(0,0,0,0.1);
+	text-decoration: none;
 }
 .super-search__result-date {
-	color: #BBB;
 	position: absolute;
+	color: #BBB;
+	font-size: 90%;
+	margin-top: 2px;
 	right: 12px;
 }
 .super-search.is-active {
 	opacity: 1;
 	visibility: visible;
+}
+
+@media screen and (max-width: 660px) {
+    .super-search__result-date {
+        display: block;
+        position: relative;
+        right: 0px;
+        text-align: center;
+    }
 }
