@@ -49,9 +49,7 @@
     {% comment %}
     <!-- The maximum reply depth is 1. Add a link to the parent comment. -->
     {% endcomment %}
-    
-    <script src="/assets/js/main.js" async></script>
-    
+        
     {% if comment.depth >= '1' %}
    		<div class="child-comment"><a href="#{{ comment.parent_id }}" style="cursor:pointer;text-decoration:none;" parent_id="{{ comment.parent_id }}" title="Responding to {{ comment.parent_name }}"><svg class="icon-angle-double-right" style="vertical-align: -3px;"><use xlink:href="/assets/img/svg/sprite.defs.svg#svg--angle-double-right"></use></svg>Responding to {{ comment.parent_name }} </a></div> 
     {% endif %}
@@ -87,7 +85,10 @@
   <!-- Add a comment submit box -->
   {% endcomment %}
   <hr>
+  
   <div class="comment-form" id="comment-submission-form">
   {% include submit_comment.html %}
   </div>
 {% endif %}
+
+<script src="/assets/js/main.js"></script>
