@@ -10,6 +10,14 @@ layout: default
   <h1 class="post-title">{{ page.title }}</h1>
   <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ page.date | ordinal }}</time>
 
+<span class="post-audio">
+	{% if page.audio != nil %}
+	<a class="audio-link" href="{{ page.audio }}">
+	<svg class="music"><use xlink:href="/assets/img/svg/sprite.defs.svg#svg--music"></use></svg> <span>Listen to this post!</span>
+	</a>
+	{% endif %}
+</span>
+
 <!-- Tags -->
 <span class="post-tags">
   {% if page.tags.size > 0 %}

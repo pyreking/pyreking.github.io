@@ -3,8 +3,9 @@ layout: post
 title: What's Jekyll?
 tags: jekyll example
 comments: true
-debugger: true
 author: aguiney
+audio: "http://feeds.soundcloud.com/stream/97561417-eric-obamas-2013-berlin-speech-at.m4a"
+audio_filesize: 53128504
 ---
 
 [Jekyll](http://jekyllrb.com) is a static site generator, an open-source tool for creating simple yet powerful websites of all shapes and sizes. From [the project's readme](https://github.com/jekyll/jekyll/blob/master/README.markdown):
