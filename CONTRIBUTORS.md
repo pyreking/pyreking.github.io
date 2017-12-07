@@ -1,6 +1,7 @@
 # Orginal work Copyright (c) 2012 by Mark Otto.
 # Modified work Copyright (c) 2017 by Austin Guiney, and other open source contributors.
 
+Adam Garrett-Harris.  
 Alex Gil.  
 Alfred Xing.  
 Anatol Broder.  
