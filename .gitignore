@@ -45,3 +45,4 @@ validation-report.json
 node_modules
 assets
 _assets/gulp_config/
+_audio
