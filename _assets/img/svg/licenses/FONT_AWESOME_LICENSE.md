@@ -1,5 +1,5 @@
     angle-double-right.svg, archive.svg, close.svg, comments.svg, envelope.svg, facebook-square.svg, feed.svg, github.svg, 
-    globe.svg, reply.svg, search.svg, tags.svg, and video-camera.svg
+    globe.svg, headphones.svg, music.svg, reply.svg, search.svg, tags.svg, and video-camera.svg
     
     Copyright (c) by Dave Gandy - <http://fontawesome.io>
     
