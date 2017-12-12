@@ -33,7 +33,7 @@ repository: "pyreking/pyreking.github.io"
 
 # Staticman comments (see staticman.yml for configuration).
 staticman:
-  branch: "master"
+  branch: "source"
 
 # About/contact
 author:
