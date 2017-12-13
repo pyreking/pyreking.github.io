@@ -6,6 +6,7 @@ title:               Austin Guiney
 tagline:             "Inside the mind of Austin Guiney!"
 baseurl:             ""
 paginate:            10
+url:                 https://www.austinguiney.com
 
 exclude: [Rakefile, 
           _posts/LICENSE.md,
@@ -33,7 +34,7 @@ repository: "pyreking/pyreking.github.io"
 
 # Staticman comments (see staticman.yml for configuration).
 staticman:
-  branch: "master"
+  branch: "source"
 
 # About/contact
 author:
