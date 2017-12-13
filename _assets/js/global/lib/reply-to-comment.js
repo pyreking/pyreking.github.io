@@ -3,7 +3,8 @@
  
 function reply(id) {
 	document.getElementById("parent_id").value = id;
-	document.getElementById("parent_name").value = document.getElementById(id).innerHTML;
+	document.getElementById("parent_name").value = document.getElementById(id).children[0].innerHTML;
+	console.log(document.getElementById("parent_name").value);
 	document.getElementById("depth").value++;
 	document.getElementById("form-title").innerText = "Reply to " + document.getElementById(id).children[0].innerHTML;
 	var commentForm = document.getElementById("comment-form");
