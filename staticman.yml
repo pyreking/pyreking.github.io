@@ -19,7 +19,7 @@ comments:
   branch: "source"
 
   # Text to use as the commit message or pull request title. Accepts placeholders.
-  commitMessage: "New comment."
+  commitMessage: "Added a new comment."
 
   # (*) REQUIRED
   #
@@ -38,7 +38,7 @@ comments:
     date:
       type: date
       options:
-        format: "iso8601"
+        format: iso8601
 
   # Whether entries need to be appproved before they are published to the main
   # branch. If set to `true`, a pull request will be created for your approval.
