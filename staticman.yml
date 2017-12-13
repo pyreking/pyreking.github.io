@@ -10,7 +10,7 @@ comments:
   #
   # Names of the fields the form is allowed to submit. If a field that is
   # not here is part of the request, an error will be thrown.
-  allowedFields: ["name", "url", "message", "parent_id", parent_name, "depth"]
+  allowedFields: ["name", "url", "message", "parent_id", "parent_name", "depth"]
 
   # (*) REQUIRED
   #
@@ -19,7 +19,7 @@ comments:
   branch: "source"
 
   # Text to use as the commit message or pull request title. Accepts placeholders.
-  commitMessage: "Added a new comment."
+  commitMessage: "Added a new comment by {fields.name}."
 
   # (*) REQUIRED
   #
