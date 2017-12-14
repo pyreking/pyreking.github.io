@@ -6,6 +6,7 @@ title:               Austin Guiney
 tagline:             "Inside the mind of Austin Guiney!"
 baseurl:             ""
 paginate:            10
+url:                 localhost:3000
 
 exclude: [Rakefile, 
           _posts/LICENSE.md,
