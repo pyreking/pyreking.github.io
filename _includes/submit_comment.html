@@ -6,14 +6,16 @@
 <!-- Comment form -->
 <div id="comment-form">
 <h3 id ="form-title" class="comments">Leave a comment</h3>
+{% assign redirect_url = site.url | append: page.url %}
 <form method="POST" action="https://api.staticman.net/v2/entry/{{ site.repository }}/{{ site.staticman.branch }}/comments">
-  <input name="options[redirect]" type="hidden" value="{{ site.url }}/{{ page.url }}">
+  <input name="options[redirect]" type="hidden" value="{{ redirect_url }}">
   <input name="options[slug]" type="hidden" value="{{ page.slug }}">
   <div>
     <legend><h4>Name</h4></legend>
     <input name="fields[name]" type="text" maxlength="20" required>
   </div>
   
+  <input type="hidden" id="post_title" name="fields[post_title]" value="{{ page.title }}">
   <input type="hidden" id="parent_id" name="fields[parent_id]" value="">
   <input type="hidden" id="parent_name" name="fields[parent_name]" value="">
   <input type="hidden" id="depth" name="fields[depth]" value="0">
