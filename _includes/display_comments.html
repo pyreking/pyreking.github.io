@@ -32,14 +32,9 @@
     
    {% for comment in comments %}
    
-   {% comment %}
-   <!-- Get the name of the author. -->
-   {% endcomment %}
-   
-   {% assign post_author = site.data.authors[page.author] %}
-   
-	<legend><h4 class="comment-author" id="{{ comment._id }}">
-	<a class="normal" href="#{{ comment._id }}">{{ comment.name }}</a></h4></legend>
+   	<legend><h4 class="comment-author" id="{{ comment._id }}">
+	<a class="normal" href="#{{ comment._id }}">{{ comment.name | strip_html | censor }}</a></h4></legend>
+	
     <legend>
     <span class="smaller">
     <time datetime="{{ comment.date | date_to_xmlschema }}" class="comment-date">{{ comment.date | ordinal }}</time>
@@ -59,7 +54,7 @@
     {% endcomment %}
     
     <p class="comment-message">
-    {{ comment.message | markdownify | whitelist | censor}}
+    {{ comment.message | strip_html | markdownify | whitelist | censor }}
     </p>
     
     {% if comment.depth < '1' %}
