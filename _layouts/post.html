@@ -12,8 +12,8 @@ layout: default
 
 <span class="post-audio">
 	{% if page.audio != nil %}
-	<a class="audio-link" href="{{ page.audio }}">
-	<svg class="music"><use xlink:href="/assets/img/svg/sprite.defs.svg#svg--music"></use></svg> <span>Listen to this post!</span>
+	<a class="svg-link" href="{{ page.audio }}">
+	<svg class="music"><use href="/assets/img/svg/sprite.defs.svg#music"></use></svg> <span>Listen to this post!</span>
 	</a>
 	{% endif %}
 </span>
@@ -22,7 +22,7 @@ layout: default
 <span class="post-tags">
   {% if page.tags.size > 0 %}
     <a class="tag-style" href="{{ site.baseurl }}/tags/" title="tags">
-    <svg class="icon-tags" style="vertical-align: -4px;"><use xlink:href="/assets/img/svg/sprite.defs.svg#svg--tags"></use></svg></a>
+    <svg class="icon-tags" style="vertical-align: -4px;"><use href="/assets/img/svg/sprite.defs.svg#tags"></use></svg></a>
     {% include get_tags.html tags=page.tags %}
     {% endif %}
 </span>
