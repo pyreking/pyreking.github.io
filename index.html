@@ -19,11 +19,11 @@ title: Home
 {% assign num_comments = site.data.comments[post.slug].size %}
 
 {% if num_comments >= 1 %}
-<div class="pagination-comments"><a class="normal" href="{{ post.url | absolute_url }}#comments"><svg class="icon-comments"><use xlink:href="/assets/img/svg/sprite.defs.svg#svg--comment-o"></use></svg> {{ num_comments }}
+<div class="pagination-comments"><a class="svg-link" href="{{ post.url | absolute_url }}#comments"><svg class="icon-comments"><use href="/assets/img/svg/sprite.defs.svg#comment-o"></use></svg> <span>{{ num_comments }}
 {% if num_comments == 1 %}
 Comment
 {% else %}
-Comments
+Comments</span>
 {% endif %}
 </a></div>
 {% endif %}
