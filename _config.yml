@@ -27,7 +27,8 @@ exclude: [Rakefile,
           Gemfile.lock,
           yarn-error.log,
           yarn.lock,
-          package-lock.json]
+          package-lock.json,
+          update-comments.sh]
 
 # Name of repository, for use with Staticman
 repository: "pyreking/pyreking.github.io"
