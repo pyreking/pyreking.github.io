@@ -47,13 +47,19 @@ MIT Licensed
 
 	function getPostsFromXml(xml) {
 		var json = xmlToJson(xml);
-		// Atom 1.0 format
+		
+		// If an array already exists, return it.
 		if (json.entry && json.entry instanceof Array) {
 			return json.entry;
 		}
-		// Atom 2.0 format
-		else {
-			return json.channel.item;
+		
+		// Build an array if one doesn't exist.
+		else if (json.entry) {
+			arr = []
+			arr.push(json.entry);
+			return arr;
+		} else {
+			return [];
 		}
 	}
 
