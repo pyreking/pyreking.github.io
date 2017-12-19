@@ -6,6 +6,7 @@ _site
 gulpfile.js
 yarn.lock
 TODO.txt
+gtts-cli.py
 
 # Numerous always-ignore extensions
 *.diff
