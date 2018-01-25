@@ -5,7 +5,7 @@
 {% unless page.comments_locked == true %}
 <!-- Comment form -->
 <div id="comment-form">
-<h3 id ="form-title" class="comments">Leave a comment</h3>
+<h3 id ="form-title" class="comments">Write a response</h3>
 <form method="POST" action="https://api.staticman.net/v2/entry/{{ site.repository }}/{{ site.staticman.branch }}/comments">
   {% if site.url != nil %}
   {% assign redirect_url = site.url | append: page.url %}
