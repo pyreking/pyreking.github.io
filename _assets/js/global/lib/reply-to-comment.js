@@ -13,7 +13,7 @@ function reply(id) {
 }
 
 function closeReply() {
-	document.getElementById("form-title").innerText = "Leave a comment";
+	document.getElementById("form-title").innerText = "Write a response";
 	document.getElementById("parent_id").value = "";
 	document.getElementById("parent_name").value = "";
 	document.getElementById("depth").value = "0";
