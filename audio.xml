@@ -37,7 +37,7 @@ layout: null
 				<pubDate>{{ post.date | ordinal }}</pubDate>
 				<description>{{ post.excerpt | xml_escape }}</description>
 				<guid isPermaLink="true">{{ post.link }}</guid>
-				<enclosure url="{{ post.audio }}" length="{{ post.audio_filesize }}" type="audio/m4a"/>
+				<enclosure url="{{ post.audio }}" length="{{ post.audio_filesize }}" type="audio/mp3"/>
 				<itunes:author>{{ site.data.authors[post.author].name }}</itunes:author>
 				<itunes:summary>{{ post.excerpt | xml_escape }}</itunes:summary>
 				<itunes:keywords>{% assign sortedtags = post.tags | sort %}{% for tag in sortedtags %}{% if tag == sortedtags.last %}{{ tag }}{% else %}{{ tag }}, {% endif %}{% endfor %}</itunes:keywords>
