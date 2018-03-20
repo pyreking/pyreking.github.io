@@ -10,6 +10,12 @@ layout: default
   <h1 class="post-title">{{ page.title }}</h1>
   <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ page.date | ordinal }}</time>
 
+{% if page.show_updated == true %}
+<span>
+	<time datetime="{{ page.path | modification_date | date_to_xmlschema }}" class="updated-date">Updated: {{ page.path | modification_date | ordinal }}</time>
+</span>
+{% endif %}
+
 <span class="post-audio">
 	{% if page.audio != nil %}
 	<a class="svg-link" href="{{ page.audio }}">
