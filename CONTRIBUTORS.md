@@ -16,6 +16,7 @@ Dan Leech.
 Eduardo Bouças.  
 hjpotter92.  
 Joshua Cox.  
+Juan A. Navarro.  
 Keyamoon.  
 Kushagra Gour.  
 Lawrence Woodman.  
