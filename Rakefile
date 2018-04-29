@@ -52,6 +52,6 @@ namespace :blog do
   end
   
   task :source do
-      system "git push -u origin master:source"
+      system "git push -u origin HEAD:source"
   end
 end
