@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Review: Happy Death Day"
+title: "Movie review: Happy Death Day"
 tags: halloween movie review
 comments: true
 author: aguiney
