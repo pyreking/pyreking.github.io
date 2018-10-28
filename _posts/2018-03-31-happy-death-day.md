@@ -64,7 +64,7 @@ This ending feels unsatisfactory because there is no prior indication that Lori 
 
 In the original ending to the film, Dr. Butler's wife murders Tree at the hospital after her confrontation with Lori. This ending feels contrived because it only exists to surprise the audience after the resolution of the main conflict. This ending failed to impress test audiences, so the producers removed it from the theatrical version of the film.
 
-Beyond the lackluster storytelling, "Happy Death Day" mishandles the way that it portrays societal issues.
+Beyond the lackluster storytelling, "Happy Death Day" mishandles the way that it portrays sensitive topics.
 
 When Tree reminisces about her mother, Danielle mocks a person with a hearing impairment in order to get her attention. This scene tries to create comic relief, but it ends up discriminating against people with disabilities.
 
