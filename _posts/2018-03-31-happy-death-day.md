@@ -72,4 +72,4 @@ When Tree fights the killer during her birthday party, a drunken person walks in
 
 When Tree investigates her friends during the montage, she spies on Tim watching gay porn. At the end of the film, Tree tells Tim to embrace his identity as a gay man. Tree does not know where Tim lies on the sexual spectrum, but she assumes that he exclusively likes men. She also fails to consider the possibility that Tim will face discrimination if he chooses to be more open about his sexuality.
 
-Ultimately, "Happy Death Day" fails to create a satisfying murder mystery film. The mystery is underwhelming, the characters lack emotional complexity, and the runtime feels bloated with too many unnecessary scenes. The awkward way that the film handles societal issues is the final nail in its coffin.
+Ultimately, "Happy Death Day" fails to create a satisfying murder mystery film. The mystery is underwhelming, the characters lack emotional complexity, and the runtime feels bloated with too many unnecessary scenes. The awkward way that the film handles sensitive topics is the final nail in its coffin.
