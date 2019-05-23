@@ -12,4 +12,4 @@ SVG icons Copyright (c) Dan Leech, Dave Gandy, Keyamoon, Kushagra Gour, and Simp
 
 Comments are Copyright (c) each respective author. All rights reserved.
 
-All other written content Copyright (c) Austin Guiney 2017 under the Creative Commons BY-NC-ND license.
+All other written content Copyright (c) 2019 Austin Guiney. All rights reserved.

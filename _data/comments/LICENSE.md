@@ -1,2 +1,2 @@
-The contents of this directory and any subdirectories within it are Copyright (c) each respective author. All Rights Reserved.  
+Copyright (c) each respective author. All rights reserved.  
 YOU MAY NOT MODIFY OR REDISTRIBUTE THE CONTENTS OF THIS DIRECTORY OR ANY SUBDIRECTORIES WITHIN IT IN ANY MANNER WITHOUT PRIOR EXPRESS WRITTEN CONSENT FROM THE RESPECTIVE COPYRIGHT HOLDERS.
