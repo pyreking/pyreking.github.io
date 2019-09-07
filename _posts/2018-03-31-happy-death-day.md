@@ -4,8 +4,6 @@ title: "Movie review: Happy Death Day"
 tags: halloween movie review
 comments: true
 author: aguiney
-audio: "http://feeds.soundcloud.com/stream/422876880-austin-guiney-review-happy-death-day.mp3"
-audio_filesize: 2036544
 ---
 
 "Happy Death Day" tells the story of Tree Gelbman, a college student who continuously relives the night of her murder. When Tree recounts her previous experiences, she attempts to discover the identity of her masked killer.
