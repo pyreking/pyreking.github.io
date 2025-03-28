@@ -14,7 +14,7 @@ schools:
           course_level: CS410
           academic_period: F22
           bullets:
-            - bullet: Provided supplemental instruction for theory of computation (class of 70), covering fundamental concepts in automata theory, computability, and complexity theory
+            - bullet: Provided supplemental instruction for class of 70, covering fundamental concepts in automata theory, computability, and complexity theory
               links:
                 - link: https://cogumbreiro.github.io/teaching/cs420/f22/
                   link_text: course website
