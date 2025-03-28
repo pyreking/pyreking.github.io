@@ -202,6 +202,8 @@ exclude:
   - _pages/news.md
   - _pages/dropdown.md
   - _pages/repositories.md
+  - _pages/projects.md
+  - _projects/*.md
   - _books/*.md
   - _site/feed.xml
 
