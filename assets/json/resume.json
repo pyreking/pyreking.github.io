@@ -41,7 +41,7 @@
 
     {
       "name": "CHIP-8 Emulator",
-      "highlights": ["Quantum Teleportation",
+      "highlights": [
       "Developed Python-based virtual machine that accurately emulates 8-bit computer architecture, enabling users to play library of 130 classic video games",
     "Designed frontend UI in Tkinter for loading games, saving progress, and changing default controls",
   "Implemented 60-second rewind feature, enabling players to undo mistakes",
@@ -90,7 +90,7 @@
     {
       "name": "Languages",
       "keywords": [
-        "Python, Java, C#, C, x86 Assembly"
+        "Python, Java, C#, C, C++, x86 Assembly"
       ]
     },
 
